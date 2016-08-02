@@ -7,7 +7,7 @@
 //
 
 import Foundation
-typealias ZPIMSendMessageProgressCompletion = ((progress: Int) -> (Void))
+typealias ZPIMSendMessageProgressCompletion = ((progress: CGFloat) -> (Void))   //progress: 0-1
 //success if `message` is NOT nil, fail otherwise; `error` include some info(success or fail)
 typealias ZPIMSendMessageCompletion = ((message: ZPIMMessage?, error: ZPIMError) -> (Void))
 typealias ZPIMDownloadMessageCompletion = ((message: ZPIMMessage?, error: ZPIMError) -> (Void))

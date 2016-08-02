@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B053F3EE1D4F53B9009DDC40 /* ZPIMChatManagerMuticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053F3ED1D4F53B9009DDC40 /* ZPIMChatManagerMuticastDelegate.swift */; };
+		B053F3F41D507E36009DDC40 /* ZPIMUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053F3F31D507E36009DDC40 /* ZPIMUtils.swift */; };
 		B068DA301CF6FCFA00A65938 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B068DA2F1CF6FCFA00A65938 /* AppDelegate.swift */; };
 		B068DA321CF6FCFA00A65938 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B068DA311CF6FCFA00A65938 /* FirstViewController.swift */; };
 		B068DA341CF6FCFA00A65938 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B068DA331CF6FCFA00A65938 /* SecondViewController.swift */; };
@@ -102,7 +104,6 @@
 		B0BB0C641D49E9CA00BFEBCF /* ZPIMChatRoomManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB0C631D49E9CA00BFEBCF /* ZPIMChatRoomManagerDelegate.swift */; };
 		B0BB0C661D49E9ED00BFEBCF /* ZPIMContactManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB0C651D49E9ED00BFEBCF /* ZPIMContactManagerDelegate.swift */; };
 		B0BB0C681D49EA0100BFEBCF /* ZPIMGroupManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB0C671D49EA0100BFEBCF /* ZPIMGroupManagerDelegate.swift */; };
-		B0BB0C6E1D49F8DE00BFEBCF /* ZPIMClient+XMPP.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB0C6D1D49F8DE00BFEBCF /* ZPIMClient+XMPP.swift */; };
 		B0BB0C701D4A094100BFEBCF /* LogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB0C6F1D4A094100BFEBCF /* LogFormatter.swift */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +125,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B053F3ED1D4F53B9009DDC40 /* ZPIMChatManagerMuticastDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZPIMChatManagerMuticastDelegate.swift; path = ../ZPIMChatManagerMuticastDelegate.swift; sourceTree = "<group>"; };
+		B053F3F31D507E36009DDC40 /* ZPIMUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZPIMUtils.swift; path = Group/ZPIMUtils.swift; sourceTree = "<group>"; };
 		B068DA2C1CF6FCFA00A65938 /* XMPPDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMPPDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B068DA2F1CF6FCFA00A65938 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B068DA311CF6FCFA00A65938 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -289,7 +292,6 @@
 		B0BB0C631D49E9CA00BFEBCF /* ZPIMChatRoomManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZPIMChatRoomManagerDelegate.swift; path = ../ZPIMChatRoomManagerDelegate.swift; sourceTree = "<group>"; };
 		B0BB0C651D49E9ED00BFEBCF /* ZPIMContactManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZPIMContactManagerDelegate.swift; path = ../ZPIMContactManagerDelegate.swift; sourceTree = "<group>"; };
 		B0BB0C671D49EA0100BFEBCF /* ZPIMGroupManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZPIMGroupManagerDelegate.swift; path = ../ZPIMGroupManagerDelegate.swift; sourceTree = "<group>"; };
-		B0BB0C6D1D49F8DE00BFEBCF /* ZPIMClient+XMPP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ZPIMClient+XMPP.swift"; sourceTree = "<group>"; };
 		B0BB0C6F1D4A094100BFEBCF /* LogFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -722,8 +724,8 @@
 				B0BB0C6A1D49EAC200BFEBCF /* Contact */,
 				B0BB0C691D49EAB900BFEBCF /* Group */,
 				B0BB0BAA1D476C6F00BFEBCF /* ZPIMClient.swift */,
-				B0BB0C6D1D49F8DE00BFEBCF /* ZPIMClient+XMPP.swift */,
 				B0BB0C571D49E80900BFEBCF /* ZPIMClientDelegate.swift */,
+				B053F3F31D507E36009DDC40 /* ZPIMUtils.swift */,
 				B0BB0C551D49DB8900BFEBCF /* ZPIMDevice.swift */,
 				B0BB0BAC1D476CE400BFEBCF /* ZPIMOptions.swift */,
 				B0BB0BAE1D47703900BFEBCF /* ZPIMPushOptions.swift */,
@@ -780,6 +782,7 @@
 				B0BB0C611D49E9AC00BFEBCF /* ZPIMChatManagerDelegate.swift */,
 				B0BB0C591D49E82900BFEBCF /* ZPIMIChatManager.swift */,
 				B0BB0BB61D485F8300BFEBCF /* ZPIMChatManager.swift */,
+				B053F3ED1D4F53B9009DDC40 /* ZPIMChatManagerMuticastDelegate.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -981,10 +984,10 @@
 				B0BB0BBF1D4866D300BFEBCF /* ZPIMError.swift in Sources */,
 				B068DAA01CF6FE3900A65938 /* GCDAsyncUdpSocket.m in Sources */,
 				B0BB0C661D49E9ED00BFEBCF /* ZPIMContactManagerDelegate.swift in Sources */,
-				B0BB0C6E1D49F8DE00BFEBCF /* ZPIMClient+XMPP.swift in Sources */,
 				B0BB0C5C1D49E93500BFEBCF /* ZPIMIChatChatRoomManager.swift in Sources */,
 				B068DA321CF6FCFA00A65938 /* FirstViewController.swift in Sources */,
 				B068DCA11CF7001200A65938 /* DDXML.swift in Sources */,
+				B053F3F41D507E36009DDC40 /* ZPIMUtils.swift in Sources */,
 				B068DB131CF6FE5700A65938 /* XMPPJID.m in Sources */,
 				B068DCC01CF7054600A65938 /* CLIColor.m in Sources */,
 				B068DB061CF6FE5700A65938 /* XMPPDeprecatedDigestAuthentication.m in Sources */,
@@ -999,6 +1002,7 @@
 				B0BB0C4E1D48917C00BFEBCF /* ZPIMVideoMessageBody.swift in Sources */,
 				B068DCC11CF7054600A65938 /* CocoaLumberjack.swift in Sources */,
 				B068DAA11CF6FE3900A65938 /* AsyncSocket.m in Sources */,
+				B053F3EE1D4F53B9009DDC40 /* ZPIMChatManagerMuticastDelegate.swift in Sources */,
 				B0BB0C4C1D48915E00BFEBCF /* ZPIMImageMessageBody.swift in Sources */,
 				B068DCC31CF7054600A65938 /* DDASLLogCapture.m in Sources */,
 				B068DAB01CF6FE3900A65938 /* NSString+DDXML.m in Sources */,

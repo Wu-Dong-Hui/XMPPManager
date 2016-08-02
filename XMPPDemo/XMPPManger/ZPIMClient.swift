@@ -12,6 +12,8 @@ typealias ZPIMBaseCompletion = ((ZPIMError?) -> Void)
 
 class ZPIMClient: NSObject {
     static let sharedClient = ZPIMClient()
+    static let domain: String = "127.0.0.1"
+    static let resource: String = "zhaopin.com"
     
     private override init() {
         DDLogInfo("init")
@@ -22,19 +24,29 @@ class ZPIMClient: NSObject {
     func initialize(options: ZPIMOptions) -> ZPIMError? {
         stream = XMPPStream()
         stream.addDelegate(self, delegateQueue: dispatch_get_global_queue(0, 0))
-        let jid = XMPPJID.jidWithUser("test1", domain: "127.0.0.1", resource: "zhaopin.com")
-        stream.myJID = jid
         
-        do {
-            try stream.connectWithTimeout(20)
-        } catch let err {
-            DDLogError("\(err)")
-        }
+        _chatManager = ZPIMChatManager()
+        
+        stream.addDelegate(_chatManager, delegateQueue: dispatch_get_global_queue(0, 0))
         
         return nil
     }
 
-    
+    private func connect(timeout: NSTimeInterval) {
+        
+    }
+    private func connect(timeout: NSTimeInterval, user: String, password: String) {
+        let jid = XMPPJID.jidWithUser(user, domain: ZPIMClient.domain, resource: ZPIMClient.resource)
+        stream.myJID = jid
+        if stream.isConnected() {
+            stream.disconnect()
+        }
+        do {
+            try stream.connectWithTimeout(timeout)
+        } catch let err {
+            DDLogError("\(err)")
+        }
+    }
     
     func addDelegate(delegate: ZPIMClientDelegate, queue: dispatch_queue_t) {
         
@@ -42,25 +54,31 @@ class ZPIMClient: NSObject {
     func removeDelegate(delegate: ZPIMClientDelegate) {
         
     }
-    func register(userName: String, password: String, completion: ZPIMBaseCompletion) {
+    
+    func register(userName: String, password: String, completion: ZPIMBaseCompletion?) {
         
     }
-    func login(userName: String, password: String, completion: ZPIMBaseCompletion) {
+    private var loginCompletion: ZPIMBaseCompletion?
+    
+    func login(userName: String, password: String, completion: ZPIMBaseCompletion?) {
+        setUserName(userName)
+        setPassword(password)
+        connect(30, user: userName, password: password)
+        loginCompletion = completion
+    }
+    func logout(completion: ZPIMBaseCompletion?) {
         
     }
-    func logout(completion: ZPIMBaseCompletion) {
+    func bindDeviceToken(token: String , completion: ZPIMBaseCompletion?) {
         
     }
-    func bindDeviceToken(token: String , completion: ZPIMBaseCompletion) {
+    func getPushOptionsFromServer(completion: ZPIMBaseCompletion?) {
         
     }
-    func getPushOptionsFromServer(completion: ZPIMBaseCompletion) {
+    func updatePushOptions(completion: ZPIMBaseCompletion?) {
         
     }
-    func updatePushOptions(completion: ZPIMBaseCompletion) {
-        
-    }
-    func setApnsNickName(name: String, completion: ZPIMBaseCompletion) {
+    func setApnsNickName(name: String, completion: ZPIMBaseCompletion?) {
         
     }
     func applicationDidEnterBackground(app: UIApplication) {
@@ -81,8 +99,9 @@ class ZPIMClient: NSObject {
     var pushOptions: ZPIMPushOptions {
         return ZPIMPushOptions()
     }
+    private var _isLoggedin: Bool = false
     var isLoggedin: Bool {
-        return false
+        return _isLoggedin
     }
     var isAutoLogin: Bool {
         return false
@@ -90,17 +109,104 @@ class ZPIMClient: NSObject {
     var isConnected: Bool {
         return false
     }
+    private var _chatManager: ZPIMIChatManager!
+    
     var chatManager: ZPIMIChatManager {
-        return ZPIMChatManager()
+        return _chatManager
     }
+    private var _contactManager: ZPIMIContactManager!
     var contactManager: ZPIMIContactManager {
-        return ZPIMContactManager()
+        return _contactManager
     }
+    private var _groupManager: ZPIMIGroupManager!
     var groupManager: ZPIMIGroupManager {
-        return ZPIMGroupManager()
+        return _groupManager
     }
+    private var _chatRoomManager: ZPIMChatRoomManager!
     var chatRoomManager: ZPIMIChatChatRoomManager {
-        return ZPIMChatRoomManager()
+        return _chatRoomManager
+    }
+    func sendElement(element: XMPPElement) {
+        stream.sendElement(element)
+    }
+}
+//MARK: - XMPPStreamDelegate
+extension ZPIMClient: XMPPStreamDelegate {
+    func xmppStreamDidConnect(sender: XMPPStream!) {
+        guard let pw = getPassword() else {
+            DDLogError("password do NOT exist")
+            return
+        }
+        do {
+            try sender.authenticateWithPassword(pw)
+        } catch let err {
+            DDLogError("auth error: \(err)")
+        }
+    }
+    func xmppStream(sender: XMPPStream!, socketDidConnect socket: GCDAsyncSocket!) {
+        //        DDLogInfo("socketDidConnect \(sender.hostPort)  \(NSString(data: socket.localAddress, encoding: NSUTF8StringEncoding))")
+    }
+    func xmppStreamDidAuthenticate(sender: XMPPStream!) {
+        let p = XMPPPresence(type: "available")
+        sender.sendElement(p)
+        loginCompletion?(nil)
+        _isLoggedin = true
+    }
+    func xmppStream(sender: XMPPStream!, didNotAuthenticate error: DDXMLElement!) {
+        DDLogError("\(error)")
+        loginCompletion?(ZPIMError(code: -1, description: error.description()))
+        _isLoggedin = false
+    }
+    func xmppStream(sender: XMPPStream!, didSendPresence presence: XMPPPresence!) {
+        
+    }
+    
+    //MARK: - receive message
+    func xmppStream(sender: XMPPStream!, didReceiveMessage message: XMPPMessage!) {
+        
+        
+    }
+    func xmppStream(sender: XMPPStream!, willReceiveMessage message: XMPPMessage!) -> XMPPMessage! {
+        //这里可以做一些过滤
+        return message
+    }
+    
+    //MARK: - send message
+    func xmppStream(sender: XMPPStream!, willSendMessage message: XMPPMessage!) -> XMPPMessage! {
+        //这里可以做一些过滤
+        return message
+    }
+    func xmppStream(sender: XMPPStream!, didSendMessage message: XMPPMessage!) {
+        
+    }
+    
+    func xmppStream(sender: XMPPStream!, didFailToSendMessage message: XMPPMessage!, error: NSError!) {
+        DDLogError(error.description)
+    }
+}
+
+//MARK: - user
+extension ZPIMClient {
+    func setUserName(name: String) {
+        setUserDefault(name, key: "name")
+    }
+    func getUserName() -> String? {
+        return getUserDefault("name") as? String
+    }
+    func setPassword(password: String) {
+        setUserDefault(password, key: "password")
+    }
+    func getPassword() -> String? {
+        return getUserDefault("password") as? String
+    }
+    private func setUserDefault(value: AnyObject, key: String) {
+        let d = NSUserDefaults.standardUserDefaults()
+        d.setObject(value, forKey: key)
+        d.synchronize()
+    }
+    private func getUserDefault(key: String) -> AnyObject? {
+        let d = NSUserDefaults.standardUserDefaults()
+        return d.valueForKey(key)
     }
     
 }

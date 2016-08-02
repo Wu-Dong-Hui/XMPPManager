@@ -12,4 +12,6 @@
 #import "DDXMLDocument.h"
 #import "CocoaLumberjack.h"
 #import "XMPPFramework.h"
+
+#import "DDList.h"
 #endif /* demo_bridging_header_h */

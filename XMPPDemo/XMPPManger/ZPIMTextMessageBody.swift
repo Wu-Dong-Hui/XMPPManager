@@ -15,6 +15,9 @@ class ZPIMTextMessageBody: ZPIMMessageBody {
     }
     init(text: String) {
         super.init(type: .text)
+        _text = text
     }
-    
+    override var description: String {
+        return super.description + " : " + _text
+    }
 }

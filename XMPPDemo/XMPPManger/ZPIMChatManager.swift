@@ -8,11 +8,23 @@
 
 import UIKit
 
-class ZPIMChatManager: NSObject, ZPIMIChatManager {
+class ZPIMChatManager: NSObject, ZPIMIChatManager, XMPPStreamDelegate {
+    var muticastDelegate: ZPIMChatManagerMuticastDelegate!
+    private var completionHandler: ZPIMSendMessageCompletion?
     
-    
-    
-    
+    override init() {
+        super.init()
+        muticastDelegate = ZPIMChatManagerMuticastDelegate()
+    }
+    func convertMessage(message: XMPPMessage) -> ZPIMMessage {
+        let m = ZPIMMessage()
+        let body = ZPIMTextMessageBody(text: message.body())
+        m.from = message.fromStr()
+        m.to = message.toStr()
+        m.body = body
+        return m
+    }
+
     //MARK: - ZPIMIChatManager
     /**
      添加回调代理
@@ -22,7 +34,7 @@ class ZPIMChatManager: NSObject, ZPIMIChatManager {
      
      */
     func addDelegate(delegate: ZPIMChatManagerDelegate, delegateQueue: dispatch_queue_t) {
-        
+        muticastDelegate.addDelegate(delegate, delegateQueue: delegateQueue)
     }
     /**
      移除回调代理
@@ -31,7 +43,7 @@ class ZPIMChatManager: NSObject, ZPIMIChatManager {
      
      */
     func removeDelegate(delegate: ZPIMChatManagerDelegate) {
-        
+        muticastDelegate.removeDelegate(delegate)
     }
     /**
      获取所有会话，如果内存中不存在会从DB中加载
@@ -143,7 +155,16 @@ class ZPIMChatManager: NSObject, ZPIMIChatManager {
      - parameter completion: 发送完成回调block
      */
     func asyncSendMessage(message: ZPIMMessage, progress: ZPIMSendMessageProgressCompletion?, completion: ZPIMSendMessageCompletion?) {
-        
+        let toJid = XMPPJID.jidWithUser(message.to, domain: ZPIMClient.domain, resource: ZPIMClient.resource)
+    
+        let xmppMessage = XMPPMessage(type: "chat", to: toJid)
+//        xmppMessage.addAttributeWithName("from", stringValue: ZPIMClient.sharedClient.getUserName()! + "@\(ZPIMClient.domain)/\(ZPIMClient.resource)")
+//        xmppMessage.addAttributeWithName("xmlns", stringValue: "jabber:client")
+        if let textBody = message.body as? ZPIMTextMessageBody {
+            xmppMessage.addBody(textBody.text)
+        }
+        completionHandler = completion
+        ZPIMClient.sharedClient.sendElement(xmppMessage)
     }
     /**
      重发送消息
@@ -180,5 +201,27 @@ class ZPIMChatManager: NSObject, ZPIMIChatManager {
      */
     func asyncDownloadMessageAttachments(message: ZPIMMessage, progress: ZPIMSendMessageProgressCompletion?, completion: ZPIMDownloadMessageCompletion?) {
         
+    }
+    
+    //MARK: - XMPPStreamDelegate
+    func xmppStream(sender: XMPPStream!, didReceiveMessage message: XMPPMessage!) {
+        if !message.isChatMessageWithBody() {
+            return
+        }
+        let m = convertMessage(message)
+        if let tmpMuticastDelegate: ZPIMChatManagerDelegate = muticastDelegate {
+            tmpMuticastDelegate.didReceiveMessages!([m])
+        }
+    }
+    func xmppStream(sender: XMPPStream!, didSendMessage message: XMPPMessage!) {
+        guard !message.isChatMessageWithBody() else {
+            return
+        }
+        completionHandler?(message: convertMessage(message), error: ZPIMError(code: 0, description: "success"))
+    }
+    
+    func xmppStream(sender: XMPPStream!, didFailToSendMessage message: XMPPMessage!, error: NSError!) {
+        DDLogError(error.description)
+        completionHandler?(message: nil, error: ZPIMError(code: -1, description: error.description))
     }
 }

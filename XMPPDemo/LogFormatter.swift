@@ -9,6 +9,6 @@
 import Foundation
 class LumberjackTTYFormatter: NSObject, DDLogFormatter {
     func formatLogMessage(logMessage: DDLogMessage!) -> String! {
-        return "[file \(logMessage.fileName)] ~ [func \(logMessage.function)] ~ [line \(logMessage.line)] ~~ \(logMessage.message)"
+        return "\(NSDate().dateByAddingTimeInterval(8 * 60 * 60)):[file \(logMessage.fileName)] ~ [func \(logMessage.function)] ~ [line \(logMessage.line)] ~~ \(logMessage.message)"
     }
 }

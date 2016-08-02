@@ -16,7 +16,7 @@ class ZPIMError: NSObject {
         return 0
     }
     override var description: String {
-        return ""
+        return "\(_code)" + "\(_description)"
     }
     
     init(code: Int, description: String) {

@@ -25,20 +25,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         log.setForegroundColor(UIColor.blueColor(), backgroundColor: UIColor.clearColor(), forFlag: DDLogFlag.Info)
         log.setForegroundColor(UIColor.yellowColor(), backgroundColor: UIColor.clearColor(), forFlag: DDLogFlag.Warning)
         log.setForegroundColor(UIColor.greenColor(), backgroundColor: UIColor.clearColor(), forFlag: DDLogFlag.Debug)
+        log.setForegroundColor(UIColor.brownColor(), backgroundColor: UIColor.clearColor(), forFlag: DDLogFlag.Verbose)
         DDLog.addLogger(log)
         
         
         let options = ZPIMOptions()
-        
-        let error = ZPIMClient.sharedClient.initialize(options)
+        let client = ZPIMClient.sharedClient
+        let error = client.initialize(options)
         
         if let err = error {
             DDLogError("\(err.code): " + err.description);
         }
+        if let user = client.getUserName(), let pw = client.getPassword() {
+            login(user, password: pw)
+        } else {
+            client.setUserName("test1")
+            client.setPassword("admin")
+            login("test1", password: "admin")
+        }
         
         return true
     }
-
+    func login(user: String, password: String) {
+        ZPIMClient.sharedClient.login(user, password: password, completion: { (error) in
+            if let err = error {
+                DDLogError(err.description)
+            }
+        })
+    }
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

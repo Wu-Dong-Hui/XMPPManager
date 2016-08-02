@@ -21,6 +21,18 @@ import UIKit
     case chat
     case groupChat
     case roomChat
+    
+    var description: String {
+        switch self {
+        case .chat:
+            return "chat"
+        case .groupChat:
+            return "groupChat"
+        case .roomChat:
+            return "roomChat"
+            
+        }
+    }
 }
 class ZPIMMessage: NSObject {
     var id: String!
@@ -40,7 +52,14 @@ class ZPIMMessage: NSObject {
     override init() {
         
     }
-    init(conversationId: String, from: String, to: String, body: ZPIMMessageBody, ext: [String: AnyObject]) {
-        
+    init(conversationId: String, from: String, to: String, body: ZPIMMessageBody, ext: [String: AnyObject]?) {
+        self.conversationId = conversationId
+        self.from = from
+        self.to = to
+        self.body = body
+        self.ext = ext
+    }
+    override var description: String {
+        return "\(from)->\(to): \(body.description)"
     }
 }
