@@ -7,8 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B053F3EE1D4F53B9009DDC40 /* ZPIMChatManagerMuticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053F3ED1D4F53B9009DDC40 /* ZPIMChatManagerMuticastDelegate.swift */; };
-		B053F3F41D507E36009DDC40 /* ZPIMUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053F3F31D507E36009DDC40 /* ZPIMUtils.swift */; };
+		B053F3F91D508C9C009DDC40 /* ZPIMChatManagerMuticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053F3F51D508C9C009DDC40 /* ZPIMChatManagerMuticastDelegate.swift */; };
+		B053F3FA1D508C9C009DDC40 /* ZPIMIChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053F3F61D508C9C009DDC40 /* ZPIMIChatManager.swift */; };
+		B053F3FB1D508C9C009DDC40 /* ZPIMChatManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053F3F71D508C9C009DDC40 /* ZPIMChatManagerDelegate.swift */; };
+		B053F3FC1D508C9C009DDC40 /* ZPIMChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053F3F81D508C9C009DDC40 /* ZPIMChatManager.swift */; };
+		B053F4011D508CA4009DDC40 /* ZPIMChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053F3FD1D508CA4009DDC40 /* ZPIMChatRoom.swift */; };
+		B053F4021D508CA4009DDC40 /* ZPIMChatRoomManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053F3FE1D508CA4009DDC40 /* ZPIMChatRoomManager.swift */; };
+		B053F4031D508CA4009DDC40 /* ZPIMChatRoomManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053F3FF1D508CA4009DDC40 /* ZPIMChatRoomManagerDelegate.swift */; };
+		B053F4041D508CA4009DDC40 /* ZPIMIChatChatRoomManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053F4001D508CA4009DDC40 /* ZPIMIChatChatRoomManager.swift */; };
+		B053F4081D508CAD009DDC40 /* ZPIMContactManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053F4051D508CAD009DDC40 /* ZPIMContactManager.swift */; };
+		B053F4091D508CAD009DDC40 /* ZPIMContactManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053F4061D508CAD009DDC40 /* ZPIMContactManagerDelegate.swift */; };
+		B053F40A1D508CAD009DDC40 /* ZPIMIContactManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053F4071D508CAD009DDC40 /* ZPIMIContactManager.swift */; };
+		B053F4101D508CB6009DDC40 /* ZPIMGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053F40B1D508CB6009DDC40 /* ZPIMGroup.swift */; };
+		B053F4111D508CB6009DDC40 /* ZPIMGroupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053F40C1D508CB6009DDC40 /* ZPIMGroupManager.swift */; };
+		B053F4121D508CB6009DDC40 /* ZPIMGroupManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053F40D1D508CB6009DDC40 /* ZPIMGroupManagerDelegate.swift */; };
+		B053F4131D508CB6009DDC40 /* ZPIMGroupOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053F40E1D508CB6009DDC40 /* ZPIMGroupOptions.swift */; };
+		B053F4141D508CB6009DDC40 /* ZPIMIGroupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053F40F1D508CB6009DDC40 /* ZPIMIGroupManager.swift */; };
+		B053F4161D508CD3009DDC40 /* ZPIMUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053F4151D508CD3009DDC40 /* ZPIMUtils.swift */; };
 		B068DA301CF6FCFA00A65938 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B068DA2F1CF6FCFA00A65938 /* AppDelegate.swift */; };
 		B068DA321CF6FCFA00A65938 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B068DA311CF6FCFA00A65938 /* FirstViewController.swift */; };
 		B068DA341CF6FCFA00A65938 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B068DA331CF6FCFA00A65938 /* SecondViewController.swift */; };
@@ -77,14 +92,7 @@
 		B0BB0BAB1D476C6F00BFEBCF /* ZPIMClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB0BAA1D476C6F00BFEBCF /* ZPIMClient.swift */; };
 		B0BB0BAD1D476CE400BFEBCF /* ZPIMOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB0BAC1D476CE400BFEBCF /* ZPIMOptions.swift */; };
 		B0BB0BAF1D47703900BFEBCF /* ZPIMPushOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB0BAE1D47703900BFEBCF /* ZPIMPushOptions.swift */; };
-		B0BB0BB71D485F8300BFEBCF /* ZPIMChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB0BB61D485F8300BFEBCF /* ZPIMChatManager.swift */; };
-		B0BB0BB91D485FA000BFEBCF /* ZPIMChatRoomManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB0BB81D485FA000BFEBCF /* ZPIMChatRoomManager.swift */; };
-		B0BB0BBB1D485FB000BFEBCF /* ZPIMGroupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB0BBA1D485FB000BFEBCF /* ZPIMGroupManager.swift */; };
-		B0BB0BBD1D485FC000BFEBCF /* ZPIMContactManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB0BBC1D485FC000BFEBCF /* ZPIMContactManager.swift */; };
 		B0BB0BBF1D4866D300BFEBCF /* ZPIMError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB0BBE1D4866D300BFEBCF /* ZPIMError.swift */; };
-		B0BB0BC11D48681400BFEBCF /* ZPIMGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB0BC01D48681400BFEBCF /* ZPIMGroup.swift */; };
-		B0BB0BC31D48682900BFEBCF /* ZPIMGroupOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB0BC21D48682900BFEBCF /* ZPIMGroupOptions.swift */; };
-		B0BB0BC51D48895900BFEBCF /* ZPIMChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB0BC41D48895900BFEBCF /* ZPIMChatRoom.swift */; };
 		B0BB0C441D48907500BFEBCF /* ZPIMConversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB0C431D48907500BFEBCF /* ZPIMConversation.swift */; };
 		B0BB0C461D4890EA00BFEBCF /* ZPIMMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB0C451D4890EA00BFEBCF /* ZPIMMessage.swift */; };
 		B0BB0C481D48910000BFEBCF /* ZPIMMessageBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB0C471D48910000BFEBCF /* ZPIMMessageBody.swift */; };
@@ -96,14 +104,6 @@
 		B0BB0C541D48B72700BFEBCF /* ZPIMLoactionMessageBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB0C531D48B72700BFEBCF /* ZPIMLoactionMessageBody.swift */; };
 		B0BB0C561D49DB8900BFEBCF /* ZPIMDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB0C551D49DB8900BFEBCF /* ZPIMDevice.swift */; };
 		B0BB0C581D49E80900BFEBCF /* ZPIMClientDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB0C571D49E80900BFEBCF /* ZPIMClientDelegate.swift */; };
-		B0BB0C5A1D49E82900BFEBCF /* ZPIMIChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB0C591D49E82900BFEBCF /* ZPIMIChatManager.swift */; };
-		B0BB0C5C1D49E93500BFEBCF /* ZPIMIChatChatRoomManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB0C5B1D49E93500BFEBCF /* ZPIMIChatChatRoomManager.swift */; };
-		B0BB0C5E1D49E97000BFEBCF /* ZPIMIContactManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB0C5D1D49E97000BFEBCF /* ZPIMIContactManager.swift */; };
-		B0BB0C601D49E99900BFEBCF /* ZPIMIGroupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB0C5F1D49E99900BFEBCF /* ZPIMIGroupManager.swift */; };
-		B0BB0C621D49E9AC00BFEBCF /* ZPIMChatManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB0C611D49E9AC00BFEBCF /* ZPIMChatManagerDelegate.swift */; };
-		B0BB0C641D49E9CA00BFEBCF /* ZPIMChatRoomManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB0C631D49E9CA00BFEBCF /* ZPIMChatRoomManagerDelegate.swift */; };
-		B0BB0C661D49E9ED00BFEBCF /* ZPIMContactManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB0C651D49E9ED00BFEBCF /* ZPIMContactManagerDelegate.swift */; };
-		B0BB0C681D49EA0100BFEBCF /* ZPIMGroupManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB0C671D49EA0100BFEBCF /* ZPIMGroupManagerDelegate.swift */; };
 		B0BB0C701D4A094100BFEBCF /* LogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB0C6F1D4A094100BFEBCF /* LogFormatter.swift */; };
 /* End PBXBuildFile section */
 
@@ -125,8 +125,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B053F3ED1D4F53B9009DDC40 /* ZPIMChatManagerMuticastDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZPIMChatManagerMuticastDelegate.swift; path = ../ZPIMChatManagerMuticastDelegate.swift; sourceTree = "<group>"; };
-		B053F3F31D507E36009DDC40 /* ZPIMUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZPIMUtils.swift; path = Group/ZPIMUtils.swift; sourceTree = "<group>"; };
+		B053F3F51D508C9C009DDC40 /* ZPIMChatManagerMuticastDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMChatManagerMuticastDelegate.swift; sourceTree = "<group>"; };
+		B053F3F61D508C9C009DDC40 /* ZPIMIChatManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMIChatManager.swift; sourceTree = "<group>"; };
+		B053F3F71D508C9C009DDC40 /* ZPIMChatManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMChatManagerDelegate.swift; sourceTree = "<group>"; };
+		B053F3F81D508C9C009DDC40 /* ZPIMChatManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMChatManager.swift; sourceTree = "<group>"; };
+		B053F3FD1D508CA4009DDC40 /* ZPIMChatRoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMChatRoom.swift; sourceTree = "<group>"; };
+		B053F3FE1D508CA4009DDC40 /* ZPIMChatRoomManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMChatRoomManager.swift; sourceTree = "<group>"; };
+		B053F3FF1D508CA4009DDC40 /* ZPIMChatRoomManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMChatRoomManagerDelegate.swift; sourceTree = "<group>"; };
+		B053F4001D508CA4009DDC40 /* ZPIMIChatChatRoomManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMIChatChatRoomManager.swift; sourceTree = "<group>"; };
+		B053F4051D508CAD009DDC40 /* ZPIMContactManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMContactManager.swift; sourceTree = "<group>"; };
+		B053F4061D508CAD009DDC40 /* ZPIMContactManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMContactManagerDelegate.swift; sourceTree = "<group>"; };
+		B053F4071D508CAD009DDC40 /* ZPIMIContactManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMIContactManager.swift; sourceTree = "<group>"; };
+		B053F40B1D508CB6009DDC40 /* ZPIMGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMGroup.swift; sourceTree = "<group>"; };
+		B053F40C1D508CB6009DDC40 /* ZPIMGroupManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMGroupManager.swift; sourceTree = "<group>"; };
+		B053F40D1D508CB6009DDC40 /* ZPIMGroupManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMGroupManagerDelegate.swift; sourceTree = "<group>"; };
+		B053F40E1D508CB6009DDC40 /* ZPIMGroupOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMGroupOptions.swift; sourceTree = "<group>"; };
+		B053F40F1D508CB6009DDC40 /* ZPIMIGroupManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMIGroupManager.swift; sourceTree = "<group>"; };
+		B053F4151D508CD3009DDC40 /* ZPIMUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMUtils.swift; sourceTree = "<group>"; };
 		B068DA2C1CF6FCFA00A65938 /* XMPPDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMPPDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B068DA2F1CF6FCFA00A65938 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B068DA311CF6FCFA00A65938 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -265,14 +280,7 @@
 		B0BB0BAA1D476C6F00BFEBCF /* ZPIMClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMClient.swift; sourceTree = "<group>"; };
 		B0BB0BAC1D476CE400BFEBCF /* ZPIMOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMOptions.swift; sourceTree = "<group>"; };
 		B0BB0BAE1D47703900BFEBCF /* ZPIMPushOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMPushOptions.swift; sourceTree = "<group>"; };
-		B0BB0BB61D485F8300BFEBCF /* ZPIMChatManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZPIMChatManager.swift; path = ../ZPIMChatManager.swift; sourceTree = "<group>"; };
-		B0BB0BB81D485FA000BFEBCF /* ZPIMChatRoomManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZPIMChatRoomManager.swift; path = ../ZPIMChatRoomManager.swift; sourceTree = "<group>"; };
-		B0BB0BBA1D485FB000BFEBCF /* ZPIMGroupManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZPIMGroupManager.swift; path = ../ZPIMGroupManager.swift; sourceTree = "<group>"; };
-		B0BB0BBC1D485FC000BFEBCF /* ZPIMContactManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZPIMContactManager.swift; path = ../ZPIMContactManager.swift; sourceTree = "<group>"; };
 		B0BB0BBE1D4866D300BFEBCF /* ZPIMError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMError.swift; sourceTree = "<group>"; };
-		B0BB0BC01D48681400BFEBCF /* ZPIMGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZPIMGroup.swift; path = ../ZPIMGroup.swift; sourceTree = "<group>"; };
-		B0BB0BC21D48682900BFEBCF /* ZPIMGroupOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZPIMGroupOptions.swift; path = ../ZPIMGroupOptions.swift; sourceTree = "<group>"; };
-		B0BB0BC41D48895900BFEBCF /* ZPIMChatRoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZPIMChatRoom.swift; path = ../ZPIMChatRoom.swift; sourceTree = "<group>"; };
 		B0BB0C431D48907500BFEBCF /* ZPIMConversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMConversation.swift; sourceTree = "<group>"; };
 		B0BB0C451D4890EA00BFEBCF /* ZPIMMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMMessage.swift; sourceTree = "<group>"; };
 		B0BB0C471D48910000BFEBCF /* ZPIMMessageBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMMessageBody.swift; sourceTree = "<group>"; };
@@ -284,14 +292,6 @@
 		B0BB0C531D48B72700BFEBCF /* ZPIMLoactionMessageBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMLoactionMessageBody.swift; sourceTree = "<group>"; };
 		B0BB0C551D49DB8900BFEBCF /* ZPIMDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMDevice.swift; sourceTree = "<group>"; };
 		B0BB0C571D49E80900BFEBCF /* ZPIMClientDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMClientDelegate.swift; sourceTree = "<group>"; };
-		B0BB0C591D49E82900BFEBCF /* ZPIMIChatManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZPIMIChatManager.swift; path = ../ZPIMIChatManager.swift; sourceTree = "<group>"; };
-		B0BB0C5B1D49E93500BFEBCF /* ZPIMIChatChatRoomManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZPIMIChatChatRoomManager.swift; path = ../ZPIMIChatChatRoomManager.swift; sourceTree = "<group>"; };
-		B0BB0C5D1D49E97000BFEBCF /* ZPIMIContactManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZPIMIContactManager.swift; path = ../ZPIMIContactManager.swift; sourceTree = "<group>"; };
-		B0BB0C5F1D49E99900BFEBCF /* ZPIMIGroupManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZPIMIGroupManager.swift; path = ../ZPIMIGroupManager.swift; sourceTree = "<group>"; };
-		B0BB0C611D49E9AC00BFEBCF /* ZPIMChatManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZPIMChatManagerDelegate.swift; path = ../ZPIMChatManagerDelegate.swift; sourceTree = "<group>"; };
-		B0BB0C631D49E9CA00BFEBCF /* ZPIMChatRoomManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZPIMChatRoomManagerDelegate.swift; path = ../ZPIMChatRoomManagerDelegate.swift; sourceTree = "<group>"; };
-		B0BB0C651D49E9ED00BFEBCF /* ZPIMContactManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZPIMContactManagerDelegate.swift; path = ../ZPIMContactManagerDelegate.swift; sourceTree = "<group>"; };
-		B0BB0C671D49EA0100BFEBCF /* ZPIMGroupManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZPIMGroupManagerDelegate.swift; path = ../ZPIMGroupManagerDelegate.swift; sourceTree = "<group>"; };
 		B0BB0C6F1D4A094100BFEBCF /* LogFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -725,7 +725,7 @@
 				B0BB0C691D49EAB900BFEBCF /* Group */,
 				B0BB0BAA1D476C6F00BFEBCF /* ZPIMClient.swift */,
 				B0BB0C571D49E80900BFEBCF /* ZPIMClientDelegate.swift */,
-				B053F3F31D507E36009DDC40 /* ZPIMUtils.swift */,
+				B053F4151D508CD3009DDC40 /* ZPIMUtils.swift */,
 				B0BB0C551D49DB8900BFEBCF /* ZPIMDevice.swift */,
 				B0BB0BAC1D476CE400BFEBCF /* ZPIMOptions.swift */,
 				B0BB0BAE1D47703900BFEBCF /* ZPIMPushOptions.swift */,
@@ -746,11 +746,11 @@
 		B0BB0C691D49EAB900BFEBCF /* Group */ = {
 			isa = PBXGroup;
 			children = (
-				B0BB0BC01D48681400BFEBCF /* ZPIMGroup.swift */,
-				B0BB0BC21D48682900BFEBCF /* ZPIMGroupOptions.swift */,
-				B0BB0C671D49EA0100BFEBCF /* ZPIMGroupManagerDelegate.swift */,
-				B0BB0C5F1D49E99900BFEBCF /* ZPIMIGroupManager.swift */,
-				B0BB0BBA1D485FB000BFEBCF /* ZPIMGroupManager.swift */,
+				B053F40B1D508CB6009DDC40 /* ZPIMGroup.swift */,
+				B053F40C1D508CB6009DDC40 /* ZPIMGroupManager.swift */,
+				B053F40D1D508CB6009DDC40 /* ZPIMGroupManagerDelegate.swift */,
+				B053F40E1D508CB6009DDC40 /* ZPIMGroupOptions.swift */,
+				B053F40F1D508CB6009DDC40 /* ZPIMIGroupManager.swift */,
 			);
 			path = Group;
 			sourceTree = "<group>";
@@ -758,9 +758,9 @@
 		B0BB0C6A1D49EAC200BFEBCF /* Contact */ = {
 			isa = PBXGroup;
 			children = (
-				B0BB0C651D49E9ED00BFEBCF /* ZPIMContactManagerDelegate.swift */,
-				B0BB0C5D1D49E97000BFEBCF /* ZPIMIContactManager.swift */,
-				B0BB0BBC1D485FC000BFEBCF /* ZPIMContactManager.swift */,
+				B053F4051D508CAD009DDC40 /* ZPIMContactManager.swift */,
+				B053F4061D508CAD009DDC40 /* ZPIMContactManagerDelegate.swift */,
+				B053F4071D508CAD009DDC40 /* ZPIMIContactManager.swift */,
 			);
 			path = Contact;
 			sourceTree = "<group>";
@@ -768,10 +768,10 @@
 		B0BB0C6B1D49EACF00BFEBCF /* ChatRoom */ = {
 			isa = PBXGroup;
 			children = (
-				B0BB0BC41D48895900BFEBCF /* ZPIMChatRoom.swift */,
-				B0BB0C631D49E9CA00BFEBCF /* ZPIMChatRoomManagerDelegate.swift */,
-				B0BB0C5B1D49E93500BFEBCF /* ZPIMIChatChatRoomManager.swift */,
-				B0BB0BB81D485FA000BFEBCF /* ZPIMChatRoomManager.swift */,
+				B053F3FD1D508CA4009DDC40 /* ZPIMChatRoom.swift */,
+				B053F3FE1D508CA4009DDC40 /* ZPIMChatRoomManager.swift */,
+				B053F3FF1D508CA4009DDC40 /* ZPIMChatRoomManagerDelegate.swift */,
+				B053F4001D508CA4009DDC40 /* ZPIMIChatChatRoomManager.swift */,
 			);
 			path = ChatRoom;
 			sourceTree = "<group>";
@@ -779,10 +779,10 @@
 		B0BB0C6C1D49EAE200BFEBCF /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				B0BB0C611D49E9AC00BFEBCF /* ZPIMChatManagerDelegate.swift */,
-				B0BB0C591D49E82900BFEBCF /* ZPIMIChatManager.swift */,
-				B0BB0BB61D485F8300BFEBCF /* ZPIMChatManager.swift */,
-				B053F3ED1D4F53B9009DDC40 /* ZPIMChatManagerMuticastDelegate.swift */,
+				B053F3F51D508C9C009DDC40 /* ZPIMChatManagerMuticastDelegate.swift */,
+				B053F3F61D508C9C009DDC40 /* ZPIMIChatManager.swift */,
+				B053F3F71D508C9C009DDC40 /* ZPIMChatManagerDelegate.swift */,
+				B053F3F81D508C9C009DDC40 /* ZPIMChatManager.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -920,23 +920,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B053F4081D508CAD009DDC40 /* ZPIMContactManager.swift in Sources */,
 				B068DCC81CF7054600A65938 /* DDContextFilterLogFormatter.m in Sources */,
-				B0BB0C621D49E9AC00BFEBCF /* ZPIMChatManagerDelegate.swift in Sources */,
 				B0BB0C581D49E80900BFEBCF /* ZPIMClientDelegate.swift in Sources */,
 				B068DB1D1CF6FE5700A65938 /* XMPPSRVResolver.m in Sources */,
-				B0BB0C5A1D49E82900BFEBCF /* ZPIMIChatManager.swift in Sources */,
 				B068DCC51CF7054600A65938 /* DDFileLogger.m in Sources */,
 				B068DB1B1CF6FE5700A65938 /* RFImageToDataTransformer.m in Sources */,
 				B068DB0A1CF6FE5700A65938 /* XMPPSCRAMSHA1Authentication.m in Sources */,
 				B068DAB61CF6FE3900A65938 /* README.markdown in Sources */,
+				B053F4011D508CA4009DDC40 /* ZPIMChatRoom.swift in Sources */,
 				B0BB0C501D48918600BFEBCF /* ZPIMVoiceMessageBody.swift in Sources */,
 				B068DCC41CF7054600A65938 /* DDASLLogger.m in Sources */,
-				B0BB0C641D49E9CA00BFEBCF /* ZPIMChatRoomManagerDelegate.swift in Sources */,
+				B053F4131D508CB6009DDC40 /* ZPIMGroupOptions.swift in Sources */,
+				B053F3FC1D508C9C009DDC40 /* ZPIMChatManager.swift in Sources */,
+				B053F4031D508CA4009DDC40 /* ZPIMChatRoomManagerDelegate.swift in Sources */,
 				B068DB141CF6FE5700A65938 /* XMPPMessage.m in Sources */,
 				B0BB0BAB1D476C6F00BFEBCF /* ZPIMClient.swift in Sources */,
 				B068DB081CF6FE5700A65938 /* XMPPDigestMD5Authentication.m in Sources */,
+				B053F4121D508CB6009DDC40 /* ZPIMGroupManagerDelegate.swift in Sources */,
 				B0BB0BAD1D476CE400BFEBCF /* ZPIMOptions.swift in Sources */,
-				B0BB0C681D49EA0100BFEBCF /* ZPIMGroupManagerDelegate.swift in Sources */,
+				B053F3FA1D508C9C009DDC40 /* ZPIMIChatManager.swift in Sources */,
 				B068DB191CF6FE5700A65938 /* DDList.m in Sources */,
 				B068DB091CF6FE5700A65938 /* XMPPPlainAuthentication.m in Sources */,
 				B068DB161CF6FE5700A65938 /* XMPPParser.m in Sources */,
@@ -944,11 +947,11 @@
 				B068DCC71CF7054600A65938 /* DDTTYLogger.m in Sources */,
 				B068DB0E1CF6FE5700A65938 /* NSNumber+XMPP.m in Sources */,
 				B068DB101CF6FE5700A65938 /* XMPPConstants.m in Sources */,
-				B0BB0BB71D485F8300BFEBCF /* ZPIMChatManager.swift in Sources */,
 				B0BB0C441D48907500BFEBCF /* ZPIMConversation.swift in Sources */,
 				B0BB0C541D48B72700BFEBCF /* ZPIMLoactionMessageBody.swift in Sources */,
 				B068DA341CF6FCFA00A65938 /* SecondViewController.swift in Sources */,
 				B068DA9F1CF6FE3900A65938 /* GCDAsyncSocket.m in Sources */,
+				B053F4141D508CB6009DDC40 /* ZPIMIGroupManager.swift in Sources */,
 				B068DB151CF6FE5700A65938 /* XMPPModule.m in Sources */,
 				B068DCC21CF7054600A65938 /* DDAbstractDatabaseLogger.m in Sources */,
 				B0BB0C701D4A094100BFEBCF /* LogFormatter.swift in Sources */,
@@ -959,7 +962,6 @@
 				B068DAB31CF6FE3900A65938 /* DDXMLElement.m in Sources */,
 				B068DB181CF6FE5700A65938 /* XMPPStream.m in Sources */,
 				B068DB1E1CF6FE5700A65938 /* XMPPStringPrep.m in Sources */,
-				B0BB0BBB1D485FB000BFEBCF /* ZPIMGroupManager.swift in Sources */,
 				B0BB0BAF1D47703900BFEBCF /* ZPIMPushOptions.swift in Sources */,
 				B068DAA21CF6FE3900A65938 /* AsyncUdpSocket.m in Sources */,
 				B068DCC91CF7054600A65938 /* DDDispatchQueueLogFormatter.m in Sources */,
@@ -969,40 +971,38 @@
 				B068DAB21CF6FE3900A65938 /* DDXMLDocument.m in Sources */,
 				B068DAAF1CF6FE3900A65938 /* DDXMLElementAdditions.m in Sources */,
 				B068DB171CF6FE5700A65938 /* XMPPPresence.m in Sources */,
-				B0BB0BC11D48681400BFEBCF /* ZPIMGroup.swift in Sources */,
+				B053F3FB1D508C9C009DDC40 /* ZPIMChatManagerDelegate.swift in Sources */,
 				B068DB051CF6FE5700A65938 /* XMPPAnonymousAuthentication.m in Sources */,
+				B053F3F91D508C9C009DDC40 /* ZPIMChatManagerMuticastDelegate.swift in Sources */,
 				B0BB0C521D489FDB00BFEBCF /* ZPIMTextMessageBody.swift in Sources */,
-				B0BB0BBD1D485FC000BFEBCF /* ZPIMContactManager.swift in Sources */,
 				B0BB0C4A1D48912600BFEBCF /* ZPIMFileMessageBody.swift in Sources */,
-				B0BB0BC51D48895900BFEBCF /* ZPIMChatRoom.swift in Sources */,
-				B0BB0BC31D48682900BFEBCF /* ZPIMGroupOptions.swift in Sources */,
 				B068DB1F1CF6FE5700A65938 /* XMPPTimer.m in Sources */,
-				B0BB0C5E1D49E97000BFEBCF /* ZPIMIContactManager.swift in Sources */,
+				B053F40A1D508CAD009DDC40 /* ZPIMIContactManager.swift in Sources */,
 				B068DA9E1CF6FE3900A65938 /* README.markdown in Sources */,
 				B0BB0C481D48910000BFEBCF /* ZPIMMessageBody.swift in Sources */,
 				B068DB0C1CF6FE5700A65938 /* XMPPXOAuth2Google.m in Sources */,
 				B0BB0BBF1D4866D300BFEBCF /* ZPIMError.swift in Sources */,
+				B053F4091D508CAD009DDC40 /* ZPIMContactManagerDelegate.swift in Sources */,
 				B068DAA01CF6FE3900A65938 /* GCDAsyncUdpSocket.m in Sources */,
-				B0BB0C661D49E9ED00BFEBCF /* ZPIMContactManagerDelegate.swift in Sources */,
-				B0BB0C5C1D49E93500BFEBCF /* ZPIMIChatChatRoomManager.swift in Sources */,
+				B053F4041D508CA4009DDC40 /* ZPIMIChatChatRoomManager.swift in Sources */,
 				B068DA321CF6FCFA00A65938 /* FirstViewController.swift in Sources */,
 				B068DCA11CF7001200A65938 /* DDXML.swift in Sources */,
-				B053F3F41D507E36009DDC40 /* ZPIMUtils.swift in Sources */,
+				B053F4161D508CD3009DDC40 /* ZPIMUtils.swift in Sources */,
+				B053F4101D508CB6009DDC40 /* ZPIMGroup.swift in Sources */,
 				B068DB131CF6FE5700A65938 /* XMPPJID.m in Sources */,
 				B068DCC01CF7054600A65938 /* CLIColor.m in Sources */,
 				B068DB061CF6FE5700A65938 /* XMPPDeprecatedDigestAuthentication.m in Sources */,
 				B0BB0C461D4890EA00BFEBCF /* ZPIMMessage.swift in Sources */,
-				B0BB0C601D49E99900BFEBCF /* ZPIMIGroupManager.swift in Sources */,
+				B053F4021D508CA4009DDC40 /* ZPIMChatRoomManager.swift in Sources */,
 				B068DB0B1CF6FE5700A65938 /* XMPPXFacebookPlatformAuthentication.m in Sources */,
 				B068DAB41CF6FE3900A65938 /* DDXMLNode.m in Sources */,
 				B068DCC61CF7054600A65938 /* DDLog.m in Sources */,
-				B0BB0BB91D485FA000BFEBCF /* ZPIMChatRoomManager.swift in Sources */,
 				B068DB111CF6FE5700A65938 /* XMPPElement.m in Sources */,
 				B068DB121CF6FE5700A65938 /* XMPPIQ.m in Sources */,
 				B0BB0C4E1D48917C00BFEBCF /* ZPIMVideoMessageBody.swift in Sources */,
 				B068DCC11CF7054600A65938 /* CocoaLumberjack.swift in Sources */,
+				B053F4111D508CB6009DDC40 /* ZPIMGroupManager.swift in Sources */,
 				B068DAA11CF6FE3900A65938 /* AsyncSocket.m in Sources */,
-				B053F3EE1D4F53B9009DDC40 /* ZPIMChatManagerMuticastDelegate.swift in Sources */,
 				B0BB0C4C1D48915E00BFEBCF /* ZPIMImageMessageBody.swift in Sources */,
 				B068DCC31CF7054600A65938 /* DDASLLogCapture.m in Sources */,
 				B068DAB01CF6FE3900A65938 /* NSString+DDXML.m in Sources */,
