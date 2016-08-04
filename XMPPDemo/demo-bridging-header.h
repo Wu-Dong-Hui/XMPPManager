@@ -14,4 +14,5 @@
 #import "XMPPFramework.h"
 
 #import "DDList.h"
+#import "JSQMessages.h"
 #endif /* demo_bridging_header_h */
