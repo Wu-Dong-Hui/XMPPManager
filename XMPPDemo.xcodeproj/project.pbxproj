@@ -51,6 +51,9 @@
 		B0199C311D532B750008D003 /* JSQMessagesTypingIndicatorFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0199C041D532B750008D003 /* JSQMessagesTypingIndicatorFooterView.m */; };
 		B0199C321D532B750008D003 /* JSQMessagesTypingIndicatorFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0199C051D532B750008D003 /* JSQMessagesTypingIndicatorFooterView.xib */; };
 		B0199C331D532B750008D003 /* JSQMessagesTypingView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0199C071D532B750008D003 /* JSQMessagesTypingView.m */; };
+		B0199DB21D5336860008D003 /* XMPPReconnect.m in Sources */ = {isa = PBXBuildFile; fileRef = B0199DB11D5336860008D003 /* XMPPReconnect.m */; };
+		B0199DB41D5339410008D003 /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199DB31D5339410008D003 /* ChatController.swift */; };
+		B0199DB61D534B810008D003 /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199DB51D534B810008D003 /* ConversationsController.swift */; };
 		B053F3F91D508C9C009DDC40 /* ZPIMChatManagerMuticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053F3F51D508C9C009DDC40 /* ZPIMChatManagerMuticastDelegate.swift */; };
 		B053F3FA1D508C9C009DDC40 /* ZPIMIChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053F3F61D508C9C009DDC40 /* ZPIMIChatManager.swift */; };
 		B053F3FB1D508C9C009DDC40 /* ZPIMChatManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053F3F71D508C9C009DDC40 /* ZPIMChatManagerDelegate.swift */; };
@@ -259,6 +262,10 @@
 		B0199C051D532B750008D003 /* JSQMessagesTypingIndicatorFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSQMessagesTypingIndicatorFooterView.xib; sourceTree = "<group>"; };
 		B0199C061D532B750008D003 /* JSQMessagesTypingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSQMessagesTypingView.h; sourceTree = "<group>"; };
 		B0199C071D532B750008D003 /* JSQMessagesTypingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSQMessagesTypingView.m; sourceTree = "<group>"; };
+		B0199DB01D5336860008D003 /* XMPPReconnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPPReconnect.h; sourceTree = "<group>"; };
+		B0199DB11D5336860008D003 /* XMPPReconnect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMPPReconnect.m; sourceTree = "<group>"; };
+		B0199DB31D5339410008D003 /* ChatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
+		B0199DB51D534B810008D003 /* ConversationsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
 		B053F3F51D508C9C009DDC40 /* ZPIMChatManagerMuticastDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMChatManagerMuticastDelegate.swift; sourceTree = "<group>"; };
 		B053F3F61D508C9C009DDC40 /* ZPIMIChatManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMIChatManager.swift; sourceTree = "<group>"; };
 		B053F3F71D508C9C009DDC40 /* ZPIMChatManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMChatManagerDelegate.swift; sourceTree = "<group>"; };
@@ -612,6 +619,23 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		B0199C381D5336720008D003 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B0199DAF1D5336860008D003 /* Reconnect */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B0199DAF1D5336860008D003 /* Reconnect */ = {
+			isa = PBXGroup;
+			children = (
+				B0199DB01D5336860008D003 /* XMPPReconnect.h */,
+				B0199DB11D5336860008D003 /* XMPPReconnect.m */,
+			);
+			path = Reconnect;
+			sourceTree = "<group>";
+		};
 		B068DA231CF6FCFA00A65938 = {
 			isa = PBXGroup;
 			children = (
@@ -646,6 +670,8 @@
 				B068DA311CF6FCFA00A65938 /* FirstViewController.swift */,
 				B068DA331CF6FCFA00A65938 /* SecondViewController.swift */,
 				B0BB0C6F1D4A094100BFEBCF /* LogFormatter.swift */,
+				B0199DB31D5339410008D003 /* ChatController.swift */,
+				B0199DB51D534B810008D003 /* ConversationsController.swift */,
 				B0BB0BA91D476C4000BFEBCF /* XMPPManger */,
 				B068DA351CF6FCFA00A65938 /* Main.storyboard */,
 				B068DA381CF6FCFA00A65938 /* Assets.xcassets */,
@@ -676,6 +702,7 @@
 		B068DA5F1CF6FDF700A65938 /* XMPPFramework */ = {
 			isa = PBXGroup;
 			children = (
+				B0199C381D5336720008D003 /* Extensions */,
 				B068DC971CF6FE9000A65938 /* XMPPFramework.h */,
 				B068DCA31CF7053E00A65938 /* CocoaLumberjack */,
 				B068DABE1CF6FE5700A65938 /* Authentication */,
@@ -1303,6 +1330,7 @@
 				B068DB0C1CF6FE5700A65938 /* XMPPXOAuth2Google.m in Sources */,
 				B0BB0BBF1D4866D300BFEBCF /* ZPIMError.swift in Sources */,
 				B0199C091D532B750008D003 /* NSBundle+JSQMessages.m in Sources */,
+				B0199DB41D5339410008D003 /* ChatController.swift in Sources */,
 				B053F4091D508CAD009DDC40 /* ZPIMContactManagerDelegate.swift in Sources */,
 				B068DAA01CF6FE3900A65938 /* GCDAsyncUdpSocket.m in Sources */,
 				B053F4041D508CA4009DDC40 /* ZPIMIChatChatRoomManager.swift in Sources */,
@@ -1320,6 +1348,7 @@
 				B0199C1D1D532B750008D003 /* JSQMessage.m in Sources */,
 				B0199C1B1D532B750008D003 /* JSQLocationMediaItem.m in Sources */,
 				B0199C311D532B750008D003 /* JSQMessagesTypingIndicatorFooterView.m in Sources */,
+				B0199DB61D534B810008D003 /* ConversationsController.swift in Sources */,
 				B0BB0C461D4890EA00BFEBCF /* ZPIMMessage.swift in Sources */,
 				B053F4021D508CA4009DDC40 /* ZPIMChatRoomManager.swift in Sources */,
 				B068DB0B1CF6FE5700A65938 /* XMPPXFacebookPlatformAuthentication.m in Sources */,
@@ -1331,6 +1360,7 @@
 				B0BB0C4E1D48917C00BFEBCF /* ZPIMVideoMessageBody.swift in Sources */,
 				B068DCC11CF7054600A65938 /* CocoaLumberjack.swift in Sources */,
 				B0199C181D532B750008D003 /* JSQMessagesCollectionViewFlowLayoutInvalidationContext.m in Sources */,
+				B0199DB21D5336860008D003 /* XMPPReconnect.m in Sources */,
 				B053F4111D508CB6009DDC40 /* ZPIMGroupManager.swift in Sources */,
 				B068DAA11CF6FE3900A65938 /* AsyncSocket.m in Sources */,
 				B0199C2B1D532B750008D003 /* JSQMessagesLabel.m in Sources */,

@@ -29,6 +29,12 @@ class ZPIMClient: NSObject {
         
         stream.addDelegate(chatManager, delegateQueue: dispatch_get_global_queue(0, 0))
         
+        
+        //register extension
+        let reconnect = XMPPReconnect(dispatchQueue: dispatch_get_global_queue(0, 0))
+        reconnect.addDelegate(self, delegateQueue: dispatch_get_global_queue(0, 0))
+        stream.registerModule(reconnect)
+        
         return nil
     }
 
@@ -173,7 +179,18 @@ extension ZPIMClient: XMPPStreamDelegate {
         DDLogError(error.description)
     }
 }
-
+//MARK: - XMPPReconnectDelegate
+extension ZPIMClient: XMPPReconnectDelegate {
+    func xmppReconnect(sender: XMPPReconnect!, didDetectAccidentalDisconnect connectionFlags: SCNetworkConnectionFlags) {
+        
+    }
+    func xmppReconnect(sender: XMPPReconnect!, shouldAttemptAutoReconnect connectionFlags: SCNetworkConnectionFlags) -> Bool {
+        if Int(connectionFlags) == kSCNetworkFlagsReachable {
+            return true
+        }
+        return false
+    }
+}
 //MARK: - user
 extension ZPIMClient {
     func setUserName(name: String) {

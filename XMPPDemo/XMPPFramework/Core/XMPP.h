@@ -29,3 +29,9 @@
 // 
 
 #import "NSXMLElement+XMPP.h"
+
+//
+// Extensions
+//
+
+#import "XMPPReconnect.h"

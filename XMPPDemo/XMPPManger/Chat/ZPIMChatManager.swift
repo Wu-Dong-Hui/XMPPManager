@@ -214,7 +214,7 @@ class ZPIMChatManager: NSObject, ZPIMIChatManager, XMPPStreamDelegate {
         }
     }
     func xmppStream(sender: XMPPStream!, didSendMessage message: XMPPMessage!) {
-        guard !message.isChatMessageWithBody() else {
+        guard message.isChatMessageWithBody() else {
             return
         }
         completionHandler?(message: convertMessage(message), error: ZPIMError(code: 0, description: "success"))
