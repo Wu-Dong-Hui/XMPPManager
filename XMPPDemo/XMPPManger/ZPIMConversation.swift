@@ -14,24 +14,14 @@ import UIKit
 }
 
 class ZPIMConversation: NSObject {
-    private var _id: String!
-    private var _type: ZPIMConversationType = .chat
-    private var _unreadMessageCount: Int = 0
-    private var _latestMessage: ZPIMMessage!
+    private (set) var id: String!
+    private (set) var type: ZPIMConversationType = .chat
+    private (set) var unreadMessageCount: Int = 0
+    private (set) var latestMessage: ZPIMMessage!
     
-    var id: String {
-        return _id
-    }
-    var type: ZPIMConversationType {
-        return _type
-    }
-    var unreadMessageCount: Int {
-        return _unreadMessageCount
-    }
+    
     var ext: [String: AnyObject]!
-    var latestMessage: ZPIMMessage {
-        return _latestMessage
-    }
+    
     
     func appendMessage(message: ZPIMMessage) -> Bool {
         return false

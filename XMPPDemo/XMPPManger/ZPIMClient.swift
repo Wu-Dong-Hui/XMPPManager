@@ -19,15 +19,15 @@ class ZPIMClient: NSObject {
         DDLogInfo("init")
     }
     
-    private var stream: XMPPStream!
+    private (set) var stream: XMPPStream!
     
     func initialize(options: ZPIMOptions) -> ZPIMError? {
         stream = XMPPStream()
         stream.addDelegate(self, delegateQueue: dispatch_get_global_queue(0, 0))
         
-        _chatManager = ZPIMChatManager()
+        chatManager = ZPIMChatManager()
         
-        stream.addDelegate(_chatManager, delegateQueue: dispatch_get_global_queue(0, 0))
+        stream.addDelegate(chatManager, delegateQueue: dispatch_get_global_queue(0, 0))
         
         return nil
     }
@@ -99,33 +99,22 @@ class ZPIMClient: NSObject {
     var pushOptions: ZPIMPushOptions {
         return ZPIMPushOptions()
     }
-    private var _isLoggedin: Bool = false
-    var isLoggedin: Bool {
-        return _isLoggedin
-    }
+    private (set) var isLoggedin: Bool = false
+
     var isAutoLogin: Bool {
         return false
     }
     var isConnected: Bool {
         return false
     }
-    private var _chatManager: ZPIMIChatManager!
+    private (set) var chatManager: ZPIMIChatManager!
     
-    var chatManager: ZPIMIChatManager {
-        return _chatManager
-    }
-    private var _contactManager: ZPIMIContactManager!
-    var contactManager: ZPIMIContactManager {
-        return _contactManager
-    }
-    private var _groupManager: ZPIMIGroupManager!
-    var groupManager: ZPIMIGroupManager {
-        return _groupManager
-    }
-    private var _chatRoomManager: ZPIMChatRoomManager!
-    var chatRoomManager: ZPIMIChatChatRoomManager {
-        return _chatRoomManager
-    }
+    private (set) var contactManager: ZPIMIContactManager!
+    
+    private (set) var groupManager: ZPIMIGroupManager!
+    
+    private (set) var chatRoomManager: ZPIMChatRoomManager!
+    
     func sendElement(element: XMPPElement) {
         stream.sendElement(element)
     }
@@ -150,12 +139,12 @@ extension ZPIMClient: XMPPStreamDelegate {
         let p = XMPPPresence(type: "available")
         sender.sendElement(p)
         loginCompletion?(nil)
-        _isLoggedin = true
+        isLoggedin = true
     }
     func xmppStream(sender: XMPPStream!, didNotAuthenticate error: DDXMLElement!) {
         DDLogError("\(error)")
         loginCompletion?(ZPIMError(code: -1, description: error.description()))
-        _isLoggedin = false
+        isLoggedin = false
     }
     func xmppStream(sender: XMPPStream!, didSendPresence presence: XMPPPresence!) {
         

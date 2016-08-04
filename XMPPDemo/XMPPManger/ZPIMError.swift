@@ -9,18 +9,16 @@
 import UIKit
 
 class ZPIMError: NSObject {
-    private var _code: Int = 0
-    private var _description: String = ""
+    private (set) var code: Int = 0
+    private (set) var desc: String = ""
     
-    var code: Int {
-        return 0
-    }
+    
     override var description: String {
-        return "\(_code)" + "\(_description)"
+        return "\(code)" + "\(desc)"
     }
     
     init(code: Int, description: String) {
-        _code = code
-        _description = description
+        self.code = code
+        self.desc = description
     }
 }

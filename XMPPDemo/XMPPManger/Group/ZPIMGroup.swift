@@ -9,15 +9,13 @@
 import UIKit
 
 class ZPIMGroup: NSObject {
-    private var _groupId: String
+    private (set) var groupId: String
     
     init(id: String) {
-        _groupId = id
+        groupId = id
     }
     
-    var groupId: String {
-        return _groupId
-    }
+    
     var subject: String {
         return ""
     }

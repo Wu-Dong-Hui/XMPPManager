@@ -9,36 +9,15 @@
 import UIKit
 
 class ZPIMChatRoom: NSObject {
-    private var _id: String!
-    private var _subject: String!
-    private var _description: String!
-    private var _owner: String!
-    private var _occupantCount: Int!
-    private var _maxOccupantCount: Int!
-    private var _occupants: Array<AnyObject>!
+    private (set) var id: String!
+    private (set) var subject: String!
+    private (set) var desc: String!
+    private (set) var owner: String!
+    private (set) var occupantCount: Int!
+    private (set) var maxOccupantCount: Int!
+    private (set) var occupants: Array<AnyObject>!
     
     init(id: String) {
         
-    }
-    var id: String {
-        return _id
-    }
-    var subject: String {
-        return _subject
-    }
-    override var description: String {
-        return _description
-    }
-    var owner: String {
-        return _owner
-    }
-    var occupantCount: Int {
-        return _occupantCount
-    }
-    var maxOccupantCount: Int {
-        return _maxOccupantCount
-    }
-    var occupants: Array<AnyObject> {
-        return _occupants
     }
 }

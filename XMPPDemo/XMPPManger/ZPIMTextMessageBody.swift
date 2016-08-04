@@ -9,15 +9,13 @@
 import UIKit
 
 class ZPIMTextMessageBody: ZPIMMessageBody {
-    private var _text: String!
-    var text: String {
-        return _text
-    }
+    private (set) var text: String!
+    
     init(text: String) {
         super.init(type: .text)
-        _text = text
+        self.text = text
     }
     override var description: String {
-        return super.description + " : " + _text
+        return super.description + " : " + text
     }
 }
