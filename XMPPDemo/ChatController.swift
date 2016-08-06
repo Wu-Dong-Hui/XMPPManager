@@ -9,31 +9,62 @@
 import UIKit
 
 class ChatController: JSQMessagesViewController, JSQMessagesComposerTextViewPasteDelegate, ZPIMChatManagerDelegate {
+    var conversation: Conversation!
+    
     var messages = [JSQMessage]()
     private var incomingBubble = JSQMessagesBubbleImageFactory().incomingMessagesBubbleImageWithColor(UIColor.grayColor())
     private var outgoingBubble = JSQMessagesBubbleImageFactory().outgoingMessagesBubbleImageWithColor(UIColor.orangeColor())
     
     private var incomingAvatar = JSQMessagesAvatarImageFactory().avatarImageWithUserInitials("adm", backgroundColor: UIColor.grayColor(), textColor: UIColor.redColor(), font: UIFont.systemFontOfSize(12))
     private var outgoingAvatar = JSQMessagesAvatarImageFactory().avatarImageWithUserInitials("roy", backgroundColor: UIColor.orangeColor(), textColor: UIColor.whiteColor(), font: UIFont.systemFontOfSize(12))
-    
+    //MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = chatToDisplayName()
+        
         view.backgroundColor = UIColor.whiteColor()
         
         inputToolbar.contentView?.textView?.pasteDelegate = self
         inputToolbar.contentView?.textView?.returnKeyType = .Send
         
-        loadDemoMessages()
+        let back = UIBarButtonItem(title: "close", style: .Done, target: self, action: #selector(self.back))
+        navigationItem.leftBarButtonItem = back
+        
+//        loadDemoMessages()
+        loadHistoryMessages()
         
         ZPIMClient.sharedClient.chatManager.addDelegate(self, delegateQueue: dispatch_get_global_queue(0, 0))
     }
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         collectionView?.collectionViewLayout.springinessEnabled = false
         inputToolbar.enablesSendButtonAutomatically = true
         inputToolbar.sendButtonOnRight = true
     }
+    //MARK: - scroll view delegate
     
+    //MARK: - private
+    func back() {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    func loadHistoryMessages(count: Int = 20) {
+        guard let user = ZPIMClient.sharedClient.getUserName() else {
+            DDLogError("please login first")
+            return
+        }
+        Utility.get("getChatLogs", paras: ["jid" : user]) { [weak self] (json, error, msg) in
+            if json != nil {
+                for message in json as! [[String: AnyObject]] {
+                    let jsqMsg = JSQMessage(senderId: message["from"] as! String, displayName: message["from"] as! String, text: message["text"] as! String)
+                    self?.messages.append(jsqMsg)
+                }
+                self?.collectionView?.reloadData()
+            } else {
+                DDLogError("\(error)")
+            }
+        }
+    }
     func loadDemoMessages() {
         for index in 0...4 {
             let m = JSQMessage(senderId: index % 2 == 0 ? senderId() : chatToId(), displayName: index % 2 == 0 ? senderDisplayName() : chatToDisplayName(), text: "message index : \(index)")
@@ -41,11 +72,16 @@ class ChatController: JSQMessagesViewController, JSQMessagesComposerTextViewPast
         }
         collectionView?.reloadData()
     }
-    
-    
+    func chatToId() -> String {
+        return conversation.jid
+    }
+    func chatToDisplayName() -> String {
+        return conversation.nick
+    }
+    //MARK: - override from super
     override func didPressSendButton(button: UIButton, withMessageText text: String, senderId: String, senderDisplayName: String, date: NSDate) {
         let textBody = ZPIMTextMessageBody(text: text)
-        let imMsg = ZPIMMessage(conversationId: "cid", from: senderId, to: "admin", body: textBody, ext: nil)
+        let imMsg = ZPIMMessage(conversationId: "cid", from: senderId, to: chatToId(), body: textBody, ext: nil)
         ZPIMClient.sharedClient.chatManager.asyncSendMessage(imMsg, progress: nil) { [weak self] (message, error) -> (Void) in
             let message = JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text)
             self?.messages.append(message)
@@ -56,6 +92,13 @@ class ChatController: JSQMessagesViewController, JSQMessagesComposerTextViewPast
         }
         
     }
+    override func senderId() -> String {
+        return "test1"
+    }
+    override func senderDisplayName() -> String {
+        return "roy"
+    }
+    //MARK: - ZPIMChatManagerDelegate
     func didReceiveMessages(messages: Array<ZPIMMessage>) {
         var latestMessages = [JSQMessage]()
         for imMsg in messages {
@@ -72,18 +115,7 @@ class ChatController: JSQMessagesViewController, JSQMessagesComposerTextViewPast
     override func didPressAccessoryButton(sender: UIButton) {
         NSLog("didPressAccessoryButton \(sender)")
     }
-    func chatToId() -> String {
-        return "admin@127.0.0.1"
-    }
-    func chatToDisplayName() -> String {
-        return "admin"
-    }
-    override func senderId() -> String {
-        return "test1@127.0.0.1"
-    }
-    override func senderDisplayName() -> String {
-        return "roy"
-    }
+    
     //MARK: - JSQ collection view data source
     override func collectionView(collectionView: JSQMessagesCollectionView, messageDataForItemAtIndexPath indexPath: NSIndexPath) -> JSQMessageData {
         return messages[indexPath.item]
@@ -111,6 +143,7 @@ class ChatController: JSQMessagesViewController, JSQMessagesComposerTextViewPast
     override func collectionView(collectionView: JSQMessagesCollectionView, attributedTextForCellBottomLabelAtIndexPath indexPath: NSIndexPath) -> NSAttributedString? {
         return nil
     }
+    //MARK: - UICollectionViewDataSource
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = super.collectionView(collectionView, cellForItemAtIndexPath: indexPath)
         

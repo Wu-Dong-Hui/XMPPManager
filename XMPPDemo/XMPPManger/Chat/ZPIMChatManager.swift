@@ -158,7 +158,7 @@ class ZPIMChatManager: NSObject, ZPIMIChatManager, XMPPStreamDelegate {
         let toJid = XMPPJID.jidWithUser(message.to, domain: ZPIMClient.domain, resource: ZPIMClient.resource)
     
         let xmppMessage = XMPPMessage(type: "chat", to: toJid)
-//        xmppMessage.addAttributeWithName("from", stringValue: ZPIMClient.sharedClient.getUserName()! + "@\(ZPIMClient.domain)/\(ZPIMClient.resource)")
+        xmppMessage.addAttributeWithName("from", stringValue: ZPIMClient.sharedClient.getUserName()! + "@\(ZPIMClient.domain)/\(ZPIMClient.resource)")
 //        xmppMessage.addAttributeWithName("xmlns", stringValue: "jabber:client")
         if let textBody = message.body as? ZPIMTextMessageBody {
             xmppMessage.addBody(textBody.text)

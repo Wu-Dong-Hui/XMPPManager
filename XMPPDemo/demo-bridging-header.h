@@ -12,6 +12,7 @@
 #import "DDXMLDocument.h"
 #import "CocoaLumberjack.h"
 #import "XMPPFramework.h"
+#import "AFNetworking.h"
 
 #import "DDList.h"
 #import "JSQMessages.h"

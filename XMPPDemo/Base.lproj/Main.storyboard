@@ -87,11 +87,11 @@
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="Fvd-yj-S8j">
             <objects>
                 <navigationController id="5Wm-3h-DEM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="W4w-nb-x0f"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="W4w-nb-x0f"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wrf-7f-kEY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -133,10 +133,10 @@
             </objects>
             <point key="canvasLocation" x="1486" y="1087"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController id="49e-Tb-3d3" customClass="MainController" customModule="XMPPDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>

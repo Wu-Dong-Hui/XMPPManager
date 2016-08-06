@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1BEE75580715E4975343FEB7A91FCCD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		1E4EB40D2DF577A1134BD6406ECD6377 /* Pods-XMPPDemoUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8767E81BA714D5938CB91347A026CF96 /* Pods-XMPPDemoUITests-dummy.m */; };
+		4A8F011B8E7918DCCAFC89EA07375BBE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		6DCDF74EE89E59E2694C21BC4388CC83 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		DB20C7CA7ADDF159724D81D8F7241E17 /* Pods-XMPPDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 143F742CF5F64566AD785108B7C934FC /* Pods-XMPPDemo-dummy.m */; };
+		E19132F5BD4A107F0311C178A98752A0 /* Pods-XMPPDemoTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A691EEFC78B9E588CED0705E9046A51 /* Pods-XMPPDemoTests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		03106D7077D53E7FAE872C551F9D3EA6 /* Pods-XMPPDemoTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XMPPDemoTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		0A691EEFC78B9E588CED0705E9046A51 /* Pods-XMPPDemoTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XMPPDemoTests-dummy.m"; sourceTree = "<group>"; };
+		143F742CF5F64566AD785108B7C934FC /* Pods-XMPPDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XMPPDemo-dummy.m"; sourceTree = "<group>"; };
+		1DE1D143F28E2B82E7D2150D93D09AD2 /* libPods-XMPPDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XMPPDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		31EDAAA365D965BC6CC53B8C4491619E /* Pods-XMPPDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XMPPDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		334E797EA1DAA8553567DD2F1F322202 /* Pods-XMPPDemoTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XMPPDemoTests-frameworks.sh"; sourceTree = "<group>"; };
+		8169A91A7F721E1D20A8499A68AEF83A /* Pods-XMPPDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XMPPDemo-frameworks.sh"; sourceTree = "<group>"; };
+		8201F74B7396C40C38291FBAD2251AB9 /* Pods-XMPPDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-XMPPDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		827B975610A2A720B73CA7AA15311442 /* Pods-XMPPDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XMPPDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		845FF35331688A88352382754AA8544D /* Pods-XMPPDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XMPPDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8767E81BA714D5938CB91347A026CF96 /* Pods-XMPPDemoUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XMPPDemoUITests-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94E3B31D5C1ABB227C9D38823DF33F2F /* Pods-XMPPDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XMPPDemo-resources.sh"; sourceTree = "<group>"; };
+		9ABC225291BD7A08F0A80CBBF3B15656 /* Pods-XMPPDemoUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XMPPDemoUITests-frameworks.sh"; sourceTree = "<group>"; };
+		9AFC84FF6B316E66A64282ED59BA04C9 /* Pods-XMPPDemoUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-XMPPDemoUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9C057FEFF5F89FA8027DC420E1172B50 /* Pods-XMPPDemoUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XMPPDemoUITests-resources.sh"; sourceTree = "<group>"; };
+		9C729DFE37DB09452BB084C1923EEEA2 /* libPods-XMPPDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XMPPDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE978046B1C3ADEEF18D9B2AE52EFFEE /* Pods-XMPPDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XMPPDemo.release.xcconfig"; sourceTree = "<group>"; };
+		B001DA2F4D455C56BF7984FD0B481C5D /* Pods-XMPPDemoUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XMPPDemoUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		B7459BD1BAC66C2B1A587D2B83C69A12 /* Pods-XMPPDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XMPPDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		C239B7054D9B9AA7004C9A1FEE3EDFB6 /* Pods-XMPPDemoTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XMPPDemoTests-resources.sh"; sourceTree = "<group>"; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D694EE9836900AB4803F1D0377A01CFC /* libPods-XMPPDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XMPPDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA95DAD291415F144E46B7E28302BE1D /* Pods-XMPPDemoTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-XMPPDemoTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F35D591E0AF603C6E1D3C9B1CFE0BCD8 /* Pods-XMPPDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XMPPDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FE694B8A6EA9C2C0302B40EF5774BA7C /* Pods-XMPPDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XMPPDemo.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3BF93C45ADEB08ABC8064366F136A82B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A8F011B8E7918DCCAFC89EA07375BBE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42D98FC533020C74F730E34C9954EAFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DCDF74EE89E59E2694C21BC4388CC83 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84727045482A3924A714DCE58D607F41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BEE75580715E4975343FEB7A91FCCD0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		26BCC330DD8605596A94E10732DC0C7A /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A54FEAF1C8A256D3106107DFEF980A9B /* Pods-XMPPDemo */,
+				359B62B3818F9B58F3EA6CC5890B2169 /* Pods-XMPPDemoTests */,
+				4190E1468B8856829BE36D3BD761AF80 /* Pods-XMPPDemoUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		359B62B3818F9B58F3EA6CC5890B2169 /* Pods-XMPPDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA95DAD291415F144E46B7E28302BE1D /* Pods-XMPPDemoTests-acknowledgements.markdown */,
+				03106D7077D53E7FAE872C551F9D3EA6 /* Pods-XMPPDemoTests-acknowledgements.plist */,
+				0A691EEFC78B9E588CED0705E9046A51 /* Pods-XMPPDemoTests-dummy.m */,
+				334E797EA1DAA8553567DD2F1F322202 /* Pods-XMPPDemoTests-frameworks.sh */,
+				C239B7054D9B9AA7004C9A1FEE3EDFB6 /* Pods-XMPPDemoTests-resources.sh */,
+				F35D591E0AF603C6E1D3C9B1CFE0BCD8 /* Pods-XMPPDemoTests.debug.xcconfig */,
+				B7459BD1BAC66C2B1A587D2B83C69A12 /* Pods-XMPPDemoTests.release.xcconfig */,
+			);
+			name = "Pods-XMPPDemoTests";
+			path = "Target Support Files/Pods-XMPPDemoTests";
+			sourceTree = "<group>";
+		};
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		4190E1468B8856829BE36D3BD761AF80 /* Pods-XMPPDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9AFC84FF6B316E66A64282ED59BA04C9 /* Pods-XMPPDemoUITests-acknowledgements.markdown */,
+				B001DA2F4D455C56BF7984FD0B481C5D /* Pods-XMPPDemoUITests-acknowledgements.plist */,
+				8767E81BA714D5938CB91347A026CF96 /* Pods-XMPPDemoUITests-dummy.m */,
+				9ABC225291BD7A08F0A80CBBF3B15656 /* Pods-XMPPDemoUITests-frameworks.sh */,
+				9C057FEFF5F89FA8027DC420E1172B50 /* Pods-XMPPDemoUITests-resources.sh */,
+				845FF35331688A88352382754AA8544D /* Pods-XMPPDemoUITests.debug.xcconfig */,
+				827B975610A2A720B73CA7AA15311442 /* Pods-XMPPDemoUITests.release.xcconfig */,
+			);
+			name = "Pods-XMPPDemoUITests";
+			path = "Target Support Files/Pods-XMPPDemoUITests";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				FA4E783F088D4BA93035B9C29DFD2BE3 /* Products */,
+				26BCC330DD8605596A94E10732DC0C7A /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A54FEAF1C8A256D3106107DFEF980A9B /* Pods-XMPPDemo */ = {
+			isa = PBXGroup;
+			children = (
+				8201F74B7396C40C38291FBAD2251AB9 /* Pods-XMPPDemo-acknowledgements.markdown */,
+				31EDAAA365D965BC6CC53B8C4491619E /* Pods-XMPPDemo-acknowledgements.plist */,
+				143F742CF5F64566AD785108B7C934FC /* Pods-XMPPDemo-dummy.m */,
+				8169A91A7F721E1D20A8499A68AEF83A /* Pods-XMPPDemo-frameworks.sh */,
+				94E3B31D5C1ABB227C9D38823DF33F2F /* Pods-XMPPDemo-resources.sh */,
+				FE694B8A6EA9C2C0302B40EF5774BA7C /* Pods-XMPPDemo.debug.xcconfig */,
+				AE978046B1C3ADEEF18D9B2AE52EFFEE /* Pods-XMPPDemo.release.xcconfig */,
+			);
+			name = "Pods-XMPPDemo";
+			path = "Target Support Files/Pods-XMPPDemo";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA4E783F088D4BA93035B9C29DFD2BE3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D694EE9836900AB4803F1D0377A01CFC /* libPods-XMPPDemo.a */,
+				1DE1D143F28E2B82E7D2150D93D09AD2 /* libPods-XMPPDemoTests.a */,
+				9C729DFE37DB09452BB084C1923EEEA2 /* libPods-XMPPDemoUITests.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		37772D8FD02D8D809217F81B144BECC7 /* Pods-XMPPDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E32CA3F37A739D2828FA55B89A53DD62 /* Build configuration list for PBXNativeTarget "Pods-XMPPDemo" */;
+			buildPhases = (
+				9F4440818A0E8999ED65C72567992C58 /* Sources */,
+				3BF93C45ADEB08ABC8064366F136A82B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-XMPPDemo";
+			productName = "Pods-XMPPDemo";
+			productReference = D694EE9836900AB4803F1D0377A01CFC /* libPods-XMPPDemo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D70C0F6B971B73836BA0D0D9A3534889 /* Pods-XMPPDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8007331E375F0F2D7D0D11BC92C61FE /* Build configuration list for PBXNativeTarget "Pods-XMPPDemoTests" */;
+			buildPhases = (
+				827CB7B07982112B55567719B3F71945 /* Sources */,
+				84727045482A3924A714DCE58D607F41 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-XMPPDemoTests";
+			productName = "Pods-XMPPDemoTests";
+			productReference = 1DE1D143F28E2B82E7D2150D93D09AD2 /* libPods-XMPPDemoTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E3EF0D352EAB91CBB5D64D4B233CB72E /* Pods-XMPPDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A3C13A5A14B5FD1CA7F1354518091D6 /* Build configuration list for PBXNativeTarget "Pods-XMPPDemoUITests" */;
+			buildPhases = (
+				B66F5D3AC4A671C2A7614B6E18B24E88 /* Sources */,
+				42D98FC533020C74F730E34C9954EAFE /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-XMPPDemoUITests";
+			productName = "Pods-XMPPDemoUITests";
+			productReference = 9C729DFE37DB09452BB084C1923EEEA2 /* libPods-XMPPDemoUITests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = FA4E783F088D4BA93035B9C29DFD2BE3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				37772D8FD02D8D809217F81B144BECC7 /* Pods-XMPPDemo */,
+				D70C0F6B971B73836BA0D0D9A3534889 /* Pods-XMPPDemoTests */,
+				E3EF0D352EAB91CBB5D64D4B233CB72E /* Pods-XMPPDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		827CB7B07982112B55567719B3F71945 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E19132F5BD4A107F0311C178A98752A0 /* Pods-XMPPDemoTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F4440818A0E8999ED65C72567992C58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB20C7CA7ADDF159724D81D8F7241E17 /* Pods-XMPPDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B66F5D3AC4A671C2A7614B6E18B24E88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E4EB40D2DF577A1134BD6406ECD6377 /* Pods-XMPPDemoUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3FA2475660FFC880302AD18E29B2E5FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		4428B92A06C5FC63054A296F423B9B1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 845FF35331688A88352382754AA8544D /* Pods-XMPPDemoUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5B6CDCAD01F6391D872A12701AF1E890 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 827B975610A2A720B73CA7AA15311442 /* Pods-XMPPDemoUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		66FF56121A711AA7CBD37C7D3A8FA8B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE694B8A6EA9C2C0302B40EF5774BA7C /* Pods-XMPPDemo.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		69D9EF842182F4C88C38EE45AFD54377 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE978046B1C3ADEEF18D9B2AE52EFFEE /* Pods-XMPPDemo.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		7301B0B63A11D69A536FBF2ADEFECFB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7459BD1BAC66C2B1A587D2B83C69A12 /* Pods-XMPPDemoTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		79C3D68A813754DEF7607F2B44852449 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F35D591E0AF603C6E1D3C9B1CFE0BCD8 /* Pods-XMPPDemoTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F325026B55060D3B22BEC0BAB5FA7344 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2A3C13A5A14B5FD1CA7F1354518091D6 /* Build configuration list for PBXNativeTarget "Pods-XMPPDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4428B92A06C5FC63054A296F423B9B1D /* Debug */,
+				5B6CDCAD01F6391D872A12701AF1E890 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FA2475660FFC880302AD18E29B2E5FC /* Debug */,
+				F325026B55060D3B22BEC0BAB5FA7344 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8007331E375F0F2D7D0D11BC92C61FE /* Build configuration list for PBXNativeTarget "Pods-XMPPDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79C3D68A813754DEF7607F2B44852449 /* Debug */,
+				7301B0B63A11D69A536FBF2ADEFECFB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E32CA3F37A739D2828FA55B89A53DD62 /* Build configuration list for PBXNativeTarget "Pods-XMPPDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66FF56121A711AA7CBD37C7D3A8FA8B3 /* Debug */,
+				69D9EF842182F4C88C38EE45AFD54377 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

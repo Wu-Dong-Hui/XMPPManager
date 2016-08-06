@@ -9,7 +9,8 @@
 import UIKit
 
 class ConversationsController: UITableViewController {
-
+    var conversations = [Conversation]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,17 +20,39 @@ class ConversationsController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
+        
+        loadConversation()
     }
-
+    func loadConversation() {
+        guard let user = ZPIMClient.sharedClient.getUserName() else {
+            DDLogError("please login first")
+            return
+        }
+        Utility.get("getFriend", paras: ["jid": user]) { [weak self] (json, error, msg) in
+            if json != nil {
+                DDLogDebug("\(json)")
+                let cs = json as! [[String: AnyObject]]
+                for c in cs {
+                    let m = Conversation(json: c)
+                    self?.conversations.append(m)
+                }
+                self?.tableView.reloadData()
+            } else {
+                DDLogError(error.debugDescription)
+            }
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let chat = ChatController()
-        
-        chat.hidesBottomBarWhenPushed = true
-        navigationController?.pushViewController(chat, animated: true)
+//        chat.hidesBottomBarWhenPushed = true
+//        navigationController?.pushViewController(chat, animated: true)
+        chat.conversation = conversations[indexPath.row]
+        let nav = UINavigationController(rootViewController: chat)
+        presentViewController(nav, animated: true, completion: nil)
     }
     // MARK: - Table view data source
 
@@ -40,7 +63,7 @@ class ConversationsController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return self.conversations.count
     }
 
     
@@ -48,7 +71,8 @@ class ConversationsController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = "admin"
+        let m = self.conversations[indexPath.row]
+        cell.textLabel?.text = m.nick
         return cell
     }
  
@@ -98,4 +122,15 @@ class ConversationsController: UITableViewController {
     }
     */
 
+}
+class Conversation: NSObject {
+    private (set) var jid: String!
+    private (set) var nick: String!
+    private (set) var avatarURL: String?
+    init(json: [String: AnyObject]) {
+        
+        self.jid = json["jid"] as! String
+        self.nick = json["nick"] as! String
+        self.avatarURL = json["avatar"] as? String
+    }
 }
