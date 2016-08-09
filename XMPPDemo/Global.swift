@@ -13,7 +13,7 @@ class Global: NSObject {
     private override init() {
         super.init()
     }
-    var server: String = "http://localhost:8080/zpim/"
+    var server: String = "http://localhost:8080/"
     
 
 }

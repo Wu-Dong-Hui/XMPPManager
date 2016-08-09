@@ -16,4 +16,8 @@
 
 #import "DDList.h"
 #import "JSQMessages.h"
+
+#import <CommonCrypto/CommonHMAC.h>
+#import "ObjcBridge.h"
+
 #endif /* demo_bridging_header_h */

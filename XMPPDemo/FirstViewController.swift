@@ -25,6 +25,25 @@ class FirstViewController: UIViewController {
 
     @IBAction func sendClicked(sender: UIButton) {
         
+        /*  
+        // test upload image
+        let path = NSBundle.mainBundle().pathForResource("lady", ofType: "png")
+        let img = UIImage(contentsOfFile: path!)
+        let data = UIImageJPEGRepresentation(img!, 0.3)!
+        
+        Utility.post("upload", paras: ["username": "wudonghui"], progress: { (progress) in
+            
+            }, constructingBodyWithBlock: { (formData) in
+                formData.appendPartWithFileData(data, name: "name", fileName: "name.jpg", mimeType: "png")
+            }) { (data, error, msg) in
+                if data != nil {
+                    DDLogDebug("upload success")
+                } else {
+                    DDLogError("\(error)")
+                }
+        }
+        */
+        
         guard ZPIMClient.sharedClient.isLoggedin else {
             DDLogError("please login before send any thing")
             return

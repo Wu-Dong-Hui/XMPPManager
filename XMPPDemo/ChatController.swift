@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChatController: JSQMessagesViewController, JSQMessagesComposerTextViewPasteDelegate, ZPIMChatManagerDelegate {
+class ChatController: JSQMessagesViewController, JSQMessagesComposerTextViewPasteDelegate, ZPIMChatManagerDelegate, UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var conversation: Conversation!
     
     var messages = [JSQMessage]()
@@ -92,11 +92,67 @@ class ChatController: JSQMessagesViewController, JSQMessagesComposerTextViewPast
         }
         
     }
+    override func didPressAccessoryButton(sender: UIButton) {
+        let actionSheet = UIActionSheet(title: "更多", delegate: self, cancelButtonTitle: "取消", destructiveButtonTitle: nil)
+        actionSheet.addButtonWithTitle("图片")
+//        actionSheet.addButtonWithTitle("视频")
+        actionSheet.showFromToolbar(inputToolbar)
+    }
     override func senderId() -> String {
         return "test1"
     }
     override func senderDisplayName() -> String {
         return "roy"
+    }
+    //MARK: - UIActionSheetDelegate
+    func actionSheet(actionSheet: UIActionSheet, didDismissWithButtonIndex buttonIndex: Int) {
+        if buttonIndex == 1 {
+            let picker = UIImagePickerController()
+            picker.delegate = self
+            if UIImagePickerController.isSourceTypeAvailable(.PhotoLibrary) {
+                picker.sourceType = .PhotoLibrary
+            }
+            presentViewController(picker, animated: true, completion: nil)
+        }
+    }
+    //MARK: - UIImagePickerControllerDelegate
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        DDLogDebug("\(editingInfo)")
+        picker.dismissViewControllerAnimated(true, completion: nil)
+        
+        let mediaItem = JSQPhotoMediaItem(image: image)
+        let message = JSQMessage(senderId: senderId(), displayName: senderDisplayName(), media: mediaItem)
+        messages.append(message)
+        dispatch_async(dispatch_get_main_queue(), {
+            self.finishSendingMessageAnimated(true)
+        })
+        /*
+        let data = UIImageJPEGRepresentation(image, 0.3)!
+        Utility.post("upload", paras: ["": ""], progress: { (progress) in
+            DDLogDebug("\(Float(progress.completedUnitCount) / Float(progress.totalUnitCount))")
+            }, constructingBodyWithBlock: { (formData) in
+                formData.appendPartWithFileData(data, name: "name", fileName: "name.jpg", mimeType: "png")
+        }) { [weak self] (json, error, msg) in
+            if json != nil {
+                DDLogDebug("upload success")
+                let url = json as! String
+                let imageBody = ZPIMImageMessageBody(data: data, displayName: "image")
+                imageBody.reomotePath = url
+                let imMsg = ZPIMMessage(conversationId: "cid", from: self!.senderId(), to: self!.chatToId(), body: imageBody, ext: nil)
+                ZPIMClient.sharedClient.chatManager.asyncSendMessage(imMsg, progress: nil) { [weak self] (message, error) -> (Void) in
+                    let mediaItem = JSQPhotoMediaItem(image: image)
+                    let message = JSQMessage(senderId: self!.senderId(), displayName: self!.senderDisplayName(), media: mediaItem)
+                    self?.messages.append(message)
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self?.finishSendingMessageAnimated(true)
+                    })
+                    
+                }
+            } else {
+                DDLogError("\(error)")
+            }
+        }
+        */
     }
     //MARK: - ZPIMChatManagerDelegate
     func didReceiveMessages(messages: Array<ZPIMMessage>) {
@@ -112,10 +168,6 @@ class ChatController: JSQMessagesViewController, JSQMessagesComposerTextViewPast
             self.finishSendingMessageAnimated(true)
         }
     }
-    override func didPressAccessoryButton(sender: UIButton) {
-        NSLog("didPressAccessoryButton \(sender)")
-    }
-    
     //MARK: - JSQ collection view data source
     override func collectionView(collectionView: JSQMessagesCollectionView, messageDataForItemAtIndexPath indexPath: NSIndexPath) -> JSQMessageData {
         return messages[indexPath.item]

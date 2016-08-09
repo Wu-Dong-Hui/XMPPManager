@@ -162,6 +162,9 @@ class ZPIMChatManager: NSObject, ZPIMIChatManager, XMPPStreamDelegate {
 //        xmppMessage.addAttributeWithName("xmlns", stringValue: "jabber:client")
         if let textBody = message.body as? ZPIMTextMessageBody {
             xmppMessage.addBody(textBody.text)
+        } else if let imageBody = message.body as? ZPIMImageMessageBody {
+            xmppMessage.addBody(imageBody.reomotePath)
+            xmppMessage.addAttributeWithName("mediaType", stringValue: imageBody.type.description)
         }
         completionHandler = completion
         ZPIMClient.sharedClient.sendElement(xmppMessage)

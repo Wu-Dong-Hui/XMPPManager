@@ -65,6 +65,79 @@
 		B0199DCD1D5589580008D003 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = B0199DC61D5589580008D003 /* AFURLResponseSerialization.m */; };
 		B0199DCE1D5589580008D003 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B0199DC81D5589580008D003 /* AFURLSessionManager.m */; };
 		B0199DD01D55926B0008D003 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199DCF1D55926B0008D003 /* MainController.swift */; };
+		B0199DE61D5878390008D003 /* lady.png in Resources */ = {isa = PBXBuildFile; fileRef = B0199DE51D5878390008D003 /* lady.png */; };
+		B0199E761D59DB100008D003 /* fragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = B0199E201D59DB100008D003 /* fragmentShader.glsl */; };
+		B0199E771D59DB100008D003 /* vertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = B0199E211D59DB100008D003 /* vertexShader.glsl */; };
+		B0199E781D59DB100008D003 /* ObjcBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = B0199E241D59DB100008D003 /* ObjcBridge.m */; };
+		B0199E791D59DB100008D003 /* DDChat.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B0199E261D59DB100008D003 /* DDChat.bundle */; };
+		B0199E7A1D59DB100008D003 /* DDInput.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B0199E271D59DB100008D003 /* DDInput.bundle */; };
+		B0199E7B1D59DB100008D003 /* DDMisc.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B0199E281D59DB100008D003 /* DDMisc.bundle */; };
+		B0199E7C1D59DB100008D003 /* DDApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E2B1D59DB100008D003 /* DDApplication.swift */; };
+		B0199E7D1D59DB100008D003 /* DDAssetOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E2C1D59DB100008D003 /* DDAssetOperation.swift */; };
+		B0199E7E1D59DB100008D003 /* DDCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E2D1D59DB100008D003 /* DDCamera.swift */; };
+		B0199E7F1D59DB100008D003 /* DDDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E2E1D59DB100008D003 /* DDDownloader.swift */; };
+		B0199E801D59DB100008D003 /* DDGLKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E2F1D59DB100008D003 /* DDGLKit.swift */; };
+		B0199E811D59DB100008D003 /* DDHashAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E301D59DB100008D003 /* DDHashAlgorithm.swift */; };
+		B0199E821D59DB100008D003 /* DDKeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E311D59DB100008D003 /* DDKeyboardObserver.swift */; };
+		B0199E831D59DB100008D003 /* DDLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E321D59DB100008D003 /* DDLog.swift */; };
+		B0199E841D59DB100008D003 /* DDMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E331D59DB100008D003 /* DDMath.swift */; };
+		B0199E851D59DB100008D003 /* DDMotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E341D59DB100008D003 /* DDMotionManager.swift */; };
+		B0199E861D59DB100008D003 /* DDPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E351D59DB100008D003 /* DDPlayer.swift */; };
+		B0199E871D59DB100008D003 /* DDSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E361D59DB100008D003 /* DDSystem.swift */; };
+		B0199E881D59DB100008D003 /* DDTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E371D59DB100008D003 /* DDTimer.swift */; };
+		B0199E891D59DB100008D003 /* DDUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E381D59DB100008D003 /* DDUploader.swift */; };
+		B0199E8A1D59DB100008D003 /* DDGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E391D59DB100008D003 /* DDGlobal.swift */; };
+		B0199E8B1D59DB100008D003 /* ALAssetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E3C1D59DB100008D003 /* ALAssetExtension.swift */; };
+		B0199E8C1D59DB100008D003 /* ALAssetsGroupExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E3D1D59DB100008D003 /* ALAssetsGroupExtension.swift */; };
+		B0199E8D1D59DB100008D003 /* NSDataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E3F1D59DB100008D003 /* NSDataExtension.swift */; };
+		B0199E8E1D59DB100008D003 /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E401D59DB100008D003 /* NSDateExtension.swift */; };
+		B0199E8F1D59DB100008D003 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E411D59DB100008D003 /* NSObjectExtension.swift */; };
+		B0199E901D59DB100008D003 /* NSURLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E421D59DB100008D003 /* NSURLExtension.swift */; };
+		B0199E911D59DB100008D003 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E441D59DB100008D003 /* ArrayExtension.swift */; };
+		B0199E921D59DB100008D003 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E451D59DB100008D003 /* StringExtension.swift */; };
+		B0199E931D59DB100008D003 /* CGGeometryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E471D59DB100008D003 /* CGGeometryExtension.swift */; };
+		B0199E941D59DB100008D003 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E481D59DB100008D003 /* UIButtonExtension.swift */; };
+		B0199E951D59DB100008D003 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E491D59DB100008D003 /* UIColorExtension.swift */; };
+		B0199E961D59DB100008D003 /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E4A1D59DB100008D003 /* UIDeviceExtension.swift */; };
+		B0199E971D59DB100008D003 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E4B1D59DB100008D003 /* UIImageExtension.swift */; };
+		B0199E981D59DB100008D003 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E4C1D59DB100008D003 /* UIImageViewExtension.swift */; };
+		B0199E991D59DB100008D003 /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E4D1D59DB100008D003 /* UINavigationControllerExtension.swift */; };
+		B0199E9A1D59DB100008D003 /* UIScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E4E1D59DB100008D003 /* UIScrollViewExtension.swift */; };
+		B0199E9B1D59DB100008D003 /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E4F1D59DB100008D003 /* UITextViewExtension.swift */; };
+		B0199E9C1D59DB100008D003 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E501D59DB100008D003 /* UIViewExtension.swift */; };
+		B0199E9D1D59DB100008D003 /* DDBubbleImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E531D59DB100008D003 /* DDBubbleImageButton.swift */; };
+		B0199E9E1D59DB100008D003 /* DDBubbleTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E541D59DB100008D003 /* DDBubbleTextButton.swift */; };
+		B0199E9F1D59DB100008D003 /* DDBubbleVoiceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E551D59DB100008D003 /* DDBubbleVoiceButton.swift */; };
+		B0199EA01D59DB100008D003 /* DDChat2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E561D59DB100008D003 /* DDChat2Controller.swift */; };
+		B0199EA11D59DB100008D003 /* DDChat2ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E571D59DB100008D003 /* DDChat2ModelView.swift */; };
+		B0199EA21D59DB100008D003 /* DDChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E581D59DB100008D003 /* DDChatCell.swift */; };
+		B0199EA31D59DB100008D003 /* DDChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E591D59DB100008D003 /* DDChatController.swift */; };
+		B0199EA41D59DB100008D003 /* DDChatImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E5A1D59DB100008D003 /* DDChatImageButton.swift */; };
+		B0199EA51D59DB100008D003 /* DDChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E5B1D59DB100008D003 /* DDChatModel.swift */; };
+		B0199EA61D59DB100008D003 /* DDChatTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E5C1D59DB100008D003 /* DDChatTextButton.swift */; };
+		B0199EA71D59DB100008D003 /* DDChatVoiceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E5D1D59DB100008D003 /* DDChatVoiceButton.swift */; };
+		B0199EA81D59DB100008D003 /* DDInputBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E5E1D59DB100008D003 /* DDInputBar.swift */; };
+		B0199EA91D59DB100008D003 /* DDInputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E5F1D59DB100008D003 /* DDInputTextView.swift */; };
+		B0199EAA1D59DB100008D003 /* DDInputVoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E601D59DB100008D003 /* DDInputVoiceView.swift */; };
+		B0199EAB1D59DB100008D003 /* DDTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E611D59DB100008D003 /* DDTextView.swift */; };
+		B0199EAC1D59DB100008D003 /* DDAssetNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E631D59DB100008D003 /* DDAssetNavigationController.swift */; };
+		B0199EAD1D59DB100008D003 /* DDGalleryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E641D59DB100008D003 /* DDGalleryController.swift */; };
+		B0199EAE1D59DB100008D003 /* DDInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E651D59DB100008D003 /* DDInputController.swift */; };
+		B0199EAF1D59DB100008D003 /* DDLutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E661D59DB100008D003 /* DDLutController.swift */; };
+		B0199EB01D59DB100008D003 /* DDTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E671D59DB100008D003 /* DDTableViewController.swift */; };
+		B0199EB11D59DB100008D003 /* DDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E681D59DB100008D003 /* DDViewController.swift */; };
+		B0199EB21D59DB100008D003 /* DDAnimationTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E6A1D59DB100008D003 /* DDAnimationTextView.swift */; };
+		B0199EB31D59DB100008D003 /* DDBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E6B1D59DB100008D003 /* DDBadgeView.swift */; };
+		B0199EB41D59DB100008D003 /* DDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E6C1D59DB100008D003 /* DDButton.swift */; };
+		B0199EB51D59DB100008D003 /* DDHoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E6D1D59DB100008D003 /* DDHoleView.swift */; };
+		B0199EB61D59DB100008D003 /* DDKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E6E1D59DB100008D003 /* DDKeyboardView.swift */; };
+		B0199EB71D59DB100008D003 /* DDLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E6F1D59DB100008D003 /* DDLabel.swift */; };
+		B0199EB81D59DB100008D003 /* DDLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E701D59DB100008D003 /* DDLevelView.swift */; };
+		B0199EB91D59DB100008D003 /* DDNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E711D59DB100008D003 /* DDNavigationBar.swift */; };
+		B0199EBA1D59DB100008D003 /* DDOptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E721D59DB100008D003 /* DDOptionButton.swift */; };
+		B0199EBB1D59DB100008D003 /* DDPartImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E731D59DB100008D003 /* DDPartImageView.swift */; };
+		B0199EBC1D59DB100008D003 /* DDPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E741D59DB100008D003 /* DDPlayerView.swift */; };
+		B0199EBD1D59DB100008D003 /* DDStarRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E751D59DB100008D003 /* DDStarRateView.swift */; };
 		B053F3F91D508C9C009DDC40 /* ZPIMChatManagerMuticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053F3F51D508C9C009DDC40 /* ZPIMChatManagerMuticastDelegate.swift */; };
 		B053F3FA1D508C9C009DDC40 /* ZPIMIChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053F3F61D508C9C009DDC40 /* ZPIMIChatManager.swift */; };
 		B053F3FB1D508C9C009DDC40 /* ZPIMChatManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053F3F71D508C9C009DDC40 /* ZPIMChatManagerDelegate.swift */; };
@@ -300,6 +373,80 @@
 		B0199DC71D5589580008D003 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		B0199DC81D5589580008D003 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		B0199DCF1D55926B0008D003 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		B0199DE51D5878390008D003 /* lady.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lady.png; sourceTree = "<group>"; };
+		B0199E201D59DB100008D003 /* fragmentShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fragmentShader.glsl; sourceTree = "<group>"; };
+		B0199E211D59DB100008D003 /* vertexShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vertexShader.glsl; sourceTree = "<group>"; };
+		B0199E231D59DB100008D003 /* ObjcBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjcBridge.h; sourceTree = "<group>"; };
+		B0199E241D59DB100008D003 /* ObjcBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjcBridge.m; sourceTree = "<group>"; };
+		B0199E261D59DB100008D003 /* DDChat.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DDChat.bundle; sourceTree = "<group>"; };
+		B0199E271D59DB100008D003 /* DDInput.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DDInput.bundle; sourceTree = "<group>"; };
+		B0199E281D59DB100008D003 /* DDMisc.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DDMisc.bundle; sourceTree = "<group>"; };
+		B0199E2B1D59DB100008D003 /* DDApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDApplication.swift; sourceTree = "<group>"; };
+		B0199E2C1D59DB100008D003 /* DDAssetOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDAssetOperation.swift; sourceTree = "<group>"; };
+		B0199E2D1D59DB100008D003 /* DDCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDCamera.swift; sourceTree = "<group>"; };
+		B0199E2E1D59DB100008D003 /* DDDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDDownloader.swift; sourceTree = "<group>"; };
+		B0199E2F1D59DB100008D003 /* DDGLKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDGLKit.swift; sourceTree = "<group>"; };
+		B0199E301D59DB100008D003 /* DDHashAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDHashAlgorithm.swift; sourceTree = "<group>"; };
+		B0199E311D59DB100008D003 /* DDKeyboardObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDKeyboardObserver.swift; sourceTree = "<group>"; };
+		B0199E321D59DB100008D003 /* DDLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDLog.swift; sourceTree = "<group>"; };
+		B0199E331D59DB100008D003 /* DDMath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDMath.swift; sourceTree = "<group>"; };
+		B0199E341D59DB100008D003 /* DDMotionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDMotionManager.swift; sourceTree = "<group>"; };
+		B0199E351D59DB100008D003 /* DDPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDPlayer.swift; sourceTree = "<group>"; };
+		B0199E361D59DB100008D003 /* DDSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDSystem.swift; sourceTree = "<group>"; };
+		B0199E371D59DB100008D003 /* DDTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDTimer.swift; sourceTree = "<group>"; };
+		B0199E381D59DB100008D003 /* DDUploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDUploader.swift; sourceTree = "<group>"; };
+		B0199E391D59DB100008D003 /* DDGlobal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDGlobal.swift; sourceTree = "<group>"; };
+		B0199E3C1D59DB100008D003 /* ALAssetExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALAssetExtension.swift; sourceTree = "<group>"; };
+		B0199E3D1D59DB100008D003 /* ALAssetsGroupExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALAssetsGroupExtension.swift; sourceTree = "<group>"; };
+		B0199E3F1D59DB100008D003 /* NSDataExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDataExtension.swift; sourceTree = "<group>"; };
+		B0199E401D59DB100008D003 /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
+		B0199E411D59DB100008D003 /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
+		B0199E421D59DB100008D003 /* NSURLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSURLExtension.swift; sourceTree = "<group>"; };
+		B0199E441D59DB100008D003 /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		B0199E451D59DB100008D003 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		B0199E471D59DB100008D003 /* CGGeometryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGGeometryExtension.swift; sourceTree = "<group>"; };
+		B0199E481D59DB100008D003 /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		B0199E491D59DB100008D003 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		B0199E4A1D59DB100008D003 /* UIDeviceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
+		B0199E4B1D59DB100008D003 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		B0199E4C1D59DB100008D003 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		B0199E4D1D59DB100008D003 /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
+		B0199E4E1D59DB100008D003 /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtension.swift; sourceTree = "<group>"; };
+		B0199E4F1D59DB100008D003 /* UITextViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
+		B0199E501D59DB100008D003 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		B0199E531D59DB100008D003 /* DDBubbleImageButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDBubbleImageButton.swift; sourceTree = "<group>"; };
+		B0199E541D59DB100008D003 /* DDBubbleTextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDBubbleTextButton.swift; sourceTree = "<group>"; };
+		B0199E551D59DB100008D003 /* DDBubbleVoiceButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDBubbleVoiceButton.swift; sourceTree = "<group>"; };
+		B0199E561D59DB100008D003 /* DDChat2Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDChat2Controller.swift; sourceTree = "<group>"; };
+		B0199E571D59DB100008D003 /* DDChat2ModelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDChat2ModelView.swift; sourceTree = "<group>"; };
+		B0199E581D59DB100008D003 /* DDChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDChatCell.swift; sourceTree = "<group>"; };
+		B0199E591D59DB100008D003 /* DDChatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDChatController.swift; sourceTree = "<group>"; };
+		B0199E5A1D59DB100008D003 /* DDChatImageButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDChatImageButton.swift; sourceTree = "<group>"; };
+		B0199E5B1D59DB100008D003 /* DDChatModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDChatModel.swift; sourceTree = "<group>"; };
+		B0199E5C1D59DB100008D003 /* DDChatTextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDChatTextButton.swift; sourceTree = "<group>"; };
+		B0199E5D1D59DB100008D003 /* DDChatVoiceButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDChatVoiceButton.swift; sourceTree = "<group>"; };
+		B0199E5E1D59DB100008D003 /* DDInputBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDInputBar.swift; sourceTree = "<group>"; };
+		B0199E5F1D59DB100008D003 /* DDInputTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDInputTextView.swift; sourceTree = "<group>"; };
+		B0199E601D59DB100008D003 /* DDInputVoiceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDInputVoiceView.swift; sourceTree = "<group>"; };
+		B0199E611D59DB100008D003 /* DDTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDTextView.swift; sourceTree = "<group>"; };
+		B0199E631D59DB100008D003 /* DDAssetNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDAssetNavigationController.swift; sourceTree = "<group>"; };
+		B0199E641D59DB100008D003 /* DDGalleryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDGalleryController.swift; sourceTree = "<group>"; };
+		B0199E651D59DB100008D003 /* DDInputController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDInputController.swift; sourceTree = "<group>"; };
+		B0199E661D59DB100008D003 /* DDLutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDLutController.swift; sourceTree = "<group>"; };
+		B0199E671D59DB100008D003 /* DDTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDTableViewController.swift; sourceTree = "<group>"; };
+		B0199E681D59DB100008D003 /* DDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDViewController.swift; sourceTree = "<group>"; };
+		B0199E6A1D59DB100008D003 /* DDAnimationTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDAnimationTextView.swift; sourceTree = "<group>"; };
+		B0199E6B1D59DB100008D003 /* DDBadgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDBadgeView.swift; sourceTree = "<group>"; };
+		B0199E6C1D59DB100008D003 /* DDButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDButton.swift; sourceTree = "<group>"; };
+		B0199E6D1D59DB100008D003 /* DDHoleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDHoleView.swift; sourceTree = "<group>"; };
+		B0199E6E1D59DB100008D003 /* DDKeyboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDKeyboardView.swift; sourceTree = "<group>"; };
+		B0199E6F1D59DB100008D003 /* DDLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDLabel.swift; sourceTree = "<group>"; };
+		B0199E701D59DB100008D003 /* DDLevelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDLevelView.swift; sourceTree = "<group>"; };
+		B0199E711D59DB100008D003 /* DDNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDNavigationBar.swift; sourceTree = "<group>"; };
+		B0199E721D59DB100008D003 /* DDOptionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDOptionButton.swift; sourceTree = "<group>"; };
+		B0199E731D59DB100008D003 /* DDPartImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDPartImageView.swift; sourceTree = "<group>"; };
+		B0199E741D59DB100008D003 /* DDPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDPlayerView.swift; sourceTree = "<group>"; };
+		B0199E751D59DB100008D003 /* DDStarRateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDStarRateView.swift; sourceTree = "<group>"; };
 		B053F3F51D508C9C009DDC40 /* ZPIMChatManagerMuticastDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMChatManagerMuticastDelegate.swift; sourceTree = "<group>"; };
 		B053F3F61D508C9C009DDC40 /* ZPIMIChatManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMIChatManager.swift; sourceTree = "<group>"; };
 		B053F3F71D508C9C009DDC40 /* ZPIMChatManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMChatManagerDelegate.swift; sourceTree = "<group>"; };
@@ -706,6 +853,198 @@
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
+		B0199E1E1D59DB100008D003 /* dd */ = {
+			isa = PBXGroup;
+			children = (
+				B0199E1F1D59DB100008D003 /* glsl */,
+				B0199E221D59DB100008D003 /* objc */,
+				B0199E251D59DB100008D003 /* rez */,
+				B0199E291D59DB100008D003 /* swift */,
+			);
+			path = dd;
+			sourceTree = "<group>";
+		};
+		B0199E1F1D59DB100008D003 /* glsl */ = {
+			isa = PBXGroup;
+			children = (
+				B0199E201D59DB100008D003 /* fragmentShader.glsl */,
+				B0199E211D59DB100008D003 /* vertexShader.glsl */,
+			);
+			path = glsl;
+			sourceTree = "<group>";
+		};
+		B0199E221D59DB100008D003 /* objc */ = {
+			isa = PBXGroup;
+			children = (
+				B0199E231D59DB100008D003 /* ObjcBridge.h */,
+				B0199E241D59DB100008D003 /* ObjcBridge.m */,
+			);
+			path = objc;
+			sourceTree = "<group>";
+		};
+		B0199E251D59DB100008D003 /* rez */ = {
+			isa = PBXGroup;
+			children = (
+				B0199E261D59DB100008D003 /* DDChat.bundle */,
+				B0199E271D59DB100008D003 /* DDInput.bundle */,
+				B0199E281D59DB100008D003 /* DDMisc.bundle */,
+			);
+			path = rez;
+			sourceTree = "<group>";
+		};
+		B0199E291D59DB100008D003 /* swift */ = {
+			isa = PBXGroup;
+			children = (
+				B0199E2A1D59DB100008D003 /* classes */,
+				B0199E391D59DB100008D003 /* DDGlobal.swift */,
+				B0199E3A1D59DB100008D003 /* extensions */,
+				B0199E511D59DB100008D003 /* subclasses */,
+			);
+			path = swift;
+			sourceTree = "<group>";
+		};
+		B0199E2A1D59DB100008D003 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				B0199E2B1D59DB100008D003 /* DDApplication.swift */,
+				B0199E2C1D59DB100008D003 /* DDAssetOperation.swift */,
+				B0199E2D1D59DB100008D003 /* DDCamera.swift */,
+				B0199E2E1D59DB100008D003 /* DDDownloader.swift */,
+				B0199E2F1D59DB100008D003 /* DDGLKit.swift */,
+				B0199E301D59DB100008D003 /* DDHashAlgorithm.swift */,
+				B0199E311D59DB100008D003 /* DDKeyboardObserver.swift */,
+				B0199E321D59DB100008D003 /* DDLog.swift */,
+				B0199E331D59DB100008D003 /* DDMath.swift */,
+				B0199E341D59DB100008D003 /* DDMotionManager.swift */,
+				B0199E351D59DB100008D003 /* DDPlayer.swift */,
+				B0199E361D59DB100008D003 /* DDSystem.swift */,
+				B0199E371D59DB100008D003 /* DDTimer.swift */,
+				B0199E381D59DB100008D003 /* DDUploader.swift */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		B0199E3A1D59DB100008D003 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B0199E3B1D59DB100008D003 /* AssetsLibrary */,
+				B0199E3E1D59DB100008D003 /* Foundation */,
+				B0199E431D59DB100008D003 /* StantardLibrary */,
+				B0199E461D59DB100008D003 /* UIKit */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		B0199E3B1D59DB100008D003 /* AssetsLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				B0199E3C1D59DB100008D003 /* ALAssetExtension.swift */,
+				B0199E3D1D59DB100008D003 /* ALAssetsGroupExtension.swift */,
+			);
+			path = AssetsLibrary;
+			sourceTree = "<group>";
+		};
+		B0199E3E1D59DB100008D003 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				B0199E3F1D59DB100008D003 /* NSDataExtension.swift */,
+				B0199E401D59DB100008D003 /* NSDateExtension.swift */,
+				B0199E411D59DB100008D003 /* NSObjectExtension.swift */,
+				B0199E421D59DB100008D003 /* NSURLExtension.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		B0199E431D59DB100008D003 /* StantardLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				B0199E441D59DB100008D003 /* ArrayExtension.swift */,
+				B0199E451D59DB100008D003 /* StringExtension.swift */,
+			);
+			path = StantardLibrary;
+			sourceTree = "<group>";
+		};
+		B0199E461D59DB100008D003 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				B0199E471D59DB100008D003 /* CGGeometryExtension.swift */,
+				B0199E481D59DB100008D003 /* UIButtonExtension.swift */,
+				B0199E491D59DB100008D003 /* UIColorExtension.swift */,
+				B0199E4A1D59DB100008D003 /* UIDeviceExtension.swift */,
+				B0199E4B1D59DB100008D003 /* UIImageExtension.swift */,
+				B0199E4C1D59DB100008D003 /* UIImageViewExtension.swift */,
+				B0199E4D1D59DB100008D003 /* UINavigationControllerExtension.swift */,
+				B0199E4E1D59DB100008D003 /* UIScrollViewExtension.swift */,
+				B0199E4F1D59DB100008D003 /* UITextViewExtension.swift */,
+				B0199E501D59DB100008D003 /* UIViewExtension.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		B0199E511D59DB100008D003 /* subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				B0199E521D59DB100008D003 /* chat */,
+				B0199E621D59DB100008D003 /* vc */,
+				B0199E691D59DB100008D003 /* view */,
+			);
+			path = subclasses;
+			sourceTree = "<group>";
+		};
+		B0199E521D59DB100008D003 /* chat */ = {
+			isa = PBXGroup;
+			children = (
+				B0199E531D59DB100008D003 /* DDBubbleImageButton.swift */,
+				B0199E541D59DB100008D003 /* DDBubbleTextButton.swift */,
+				B0199E551D59DB100008D003 /* DDBubbleVoiceButton.swift */,
+				B0199E561D59DB100008D003 /* DDChat2Controller.swift */,
+				B0199E571D59DB100008D003 /* DDChat2ModelView.swift */,
+				B0199E581D59DB100008D003 /* DDChatCell.swift */,
+				B0199E591D59DB100008D003 /* DDChatController.swift */,
+				B0199E5A1D59DB100008D003 /* DDChatImageButton.swift */,
+				B0199E5B1D59DB100008D003 /* DDChatModel.swift */,
+				B0199E5C1D59DB100008D003 /* DDChatTextButton.swift */,
+				B0199E5D1D59DB100008D003 /* DDChatVoiceButton.swift */,
+				B0199E5E1D59DB100008D003 /* DDInputBar.swift */,
+				B0199E5F1D59DB100008D003 /* DDInputTextView.swift */,
+				B0199E601D59DB100008D003 /* DDInputVoiceView.swift */,
+				B0199E611D59DB100008D003 /* DDTextView.swift */,
+			);
+			path = chat;
+			sourceTree = "<group>";
+		};
+		B0199E621D59DB100008D003 /* vc */ = {
+			isa = PBXGroup;
+			children = (
+				B0199E631D59DB100008D003 /* DDAssetNavigationController.swift */,
+				B0199E641D59DB100008D003 /* DDGalleryController.swift */,
+				B0199E651D59DB100008D003 /* DDInputController.swift */,
+				B0199E661D59DB100008D003 /* DDLutController.swift */,
+				B0199E671D59DB100008D003 /* DDTableViewController.swift */,
+				B0199E681D59DB100008D003 /* DDViewController.swift */,
+			);
+			path = vc;
+			sourceTree = "<group>";
+		};
+		B0199E691D59DB100008D003 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B0199E6A1D59DB100008D003 /* DDAnimationTextView.swift */,
+				B0199E6B1D59DB100008D003 /* DDBadgeView.swift */,
+				B0199E6C1D59DB100008D003 /* DDButton.swift */,
+				B0199E6D1D59DB100008D003 /* DDHoleView.swift */,
+				B0199E6E1D59DB100008D003 /* DDKeyboardView.swift */,
+				B0199E6F1D59DB100008D003 /* DDLabel.swift */,
+				B0199E701D59DB100008D003 /* DDLevelView.swift */,
+				B0199E711D59DB100008D003 /* DDNavigationBar.swift */,
+				B0199E721D59DB100008D003 /* DDOptionButton.swift */,
+				B0199E731D59DB100008D003 /* DDPartImageView.swift */,
+				B0199E741D59DB100008D003 /* DDPlayerView.swift */,
+				B0199E751D59DB100008D003 /* DDStarRateView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		B068DA231CF6FCFA00A65938 = {
 			isa = PBXGroup;
 			children = (
@@ -740,7 +1079,9 @@
 				B068DA5F1CF6FDF700A65938 /* XMPPFramework */,
 				B068DA2F1CF6FCFA00A65938 /* AppDelegate.swift */,
 				B068DCA21CF7005F00A65938 /* demo-bridging-header.h */,
+				B0199E1E1D59DB100008D003 /* dd */,
 				B068DA311CF6FCFA00A65938 /* FirstViewController.swift */,
+				B0199DE51D5878390008D003 /* lady.png */,
 				B068DA331CF6FCFA00A65938 /* SecondViewController.swift */,
 				B0BB0C6F1D4A094100BFEBCF /* LogFormatter.swift */,
 				B0199DB31D5339410008D003 /* ChatController.swift */,
@@ -1314,7 +1655,13 @@
 				B068DA391CF6FCFA00A65938 /* Assets.xcassets in Resources */,
 				B0199C321D532B750008D003 /* JSQMessagesTypingIndicatorFooterView.xib in Resources */,
 				B068DA371CF6FCFA00A65938 /* Main.storyboard in Resources */,
+				B0199DE61D5878390008D003 /* lady.png in Resources */,
+				B0199E771D59DB100008D003 /* vertexShader.glsl in Resources */,
+				B0199E791D59DB100008D003 /* DDChat.bundle in Resources */,
+				B0199E761D59DB100008D003 /* fragmentShader.glsl in Resources */,
 				B0199C0F1D532B750008D003 /* JSQMessagesViewController.xib in Resources */,
+				B0199E7A1D59DB100008D003 /* DDInput.bundle in Resources */,
+				B0199E7B1D59DB100008D003 /* DDMisc.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1462,18 +1809,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0199EAE1D59DB100008D003 /* DDInputController.swift in Sources */,
 				B053F4081D508CAD009DDC40 /* ZPIMContactManager.swift in Sources */,
 				B0199C111D532B750008D003 /* JSQMessagesBubbleImageFactory.m in Sources */,
+				B0199E781D59DB100008D003 /* ObjcBridge.m in Sources */,
+				B0199EB11D59DB100008D003 /* DDViewController.swift in Sources */,
+				B0199E961D59DB100008D003 /* UIDeviceExtension.swift in Sources */,
 				B068DCC81CF7054600A65938 /* DDContextFilterLogFormatter.m in Sources */,
 				B0199C171D532B750008D003 /* JSQMessagesCollectionViewFlowLayout.m in Sources */,
 				B0BB0C581D49E80900BFEBCF /* ZPIMClientDelegate.swift in Sources */,
+				B0199E821D59DB100008D003 /* DDKeyboardObserver.swift in Sources */,
+				B0199E931D59DB100008D003 /* CGGeometryExtension.swift in Sources */,
 				B0199C241D532B750008D003 /* JSQMessagesCollectionViewCell.m in Sources */,
+				B0199E9E1D59DB100008D003 /* DDBubbleTextButton.swift in Sources */,
 				B068DB1D1CF6FE5700A65938 /* XMPPSRVResolver.m in Sources */,
+				B0199EA01D59DB100008D003 /* DDChat2Controller.swift in Sources */,
+				B0199EA31D59DB100008D003 /* DDChatController.swift in Sources */,
 				B0199C2F1D532B750008D003 /* JSQMessagesToolbarContentView.m in Sources */,
+				B0199EA81D59DB100008D003 /* DDInputBar.swift in Sources */,
 				B0199C221D532B750008D003 /* JSQMessagesCellTextView.m in Sources */,
 				B068DCC51CF7054600A65938 /* DDFileLogger.m in Sources */,
+				B0199E7E1D59DB100008D003 /* DDCamera.swift in Sources */,
 				B068DB1B1CF6FE5700A65938 /* RFImageToDataTransformer.m in Sources */,
 				B0199DCE1D5589580008D003 /* AFURLSessionManager.m in Sources */,
+				B0199E851D59DB100008D003 /* DDMotionManager.swift in Sources */,
 				B068DB0A1CF6FE5700A65938 /* XMPPSCRAMSHA1Authentication.m in Sources */,
 				B0199C131D532B750008D003 /* JSQMessagesTimestampFormatter.m in Sources */,
 				B068DAB61CF6FE3900A65938 /* README.markdown in Sources */,
@@ -1484,47 +1843,73 @@
 				B053F4131D508CB6009DDC40 /* ZPIMGroupOptions.swift in Sources */,
 				B053F3FC1D508C9C009DDC40 /* ZPIMChatManager.swift in Sources */,
 				B053F4031D508CA4009DDC40 /* ZPIMChatRoomManagerDelegate.swift in Sources */,
+				B0199E7C1D59DB100008D003 /* DDApplication.swift in Sources */,
 				B068DB141CF6FE5700A65938 /* XMPPMessage.m in Sources */,
 				B0199C0D1D532B750008D003 /* UIView+JSQMessages.m in Sources */,
 				B0199C1F1D532B750008D003 /* JSQMessagesBubbleImage.m in Sources */,
+				B0199E7F1D59DB100008D003 /* DDDownloader.swift in Sources */,
+				B0199E9F1D59DB100008D003 /* DDBubbleVoiceButton.swift in Sources */,
 				B0BB0BAB1D476C6F00BFEBCF /* ZPIMClient.swift in Sources */,
 				B0199C2E1D532B750008D003 /* JSQMessagesMediaPlaceholderView.m in Sources */,
 				B068DB081CF6FE5700A65938 /* XMPPDigestMD5Authentication.m in Sources */,
 				B053F4121D508CB6009DDC40 /* ZPIMGroupManagerDelegate.swift in Sources */,
+				B0199EBD1D59DB100008D003 /* DDStarRateView.swift in Sources */,
 				B0199C0C1D532B750008D003 /* UIImage+JSQMessages.m in Sources */,
+				B0199EBB1D59DB100008D003 /* DDPartImageView.swift in Sources */,
 				B0BB0BAD1D476CE400BFEBCF /* ZPIMOptions.swift in Sources */,
+				B0199EB51D59DB100008D003 /* DDHoleView.swift in Sources */,
+				B0199E9D1D59DB100008D003 /* DDBubbleImageButton.swift in Sources */,
 				B053F3FA1D508C9C009DDC40 /* ZPIMIChatManager.swift in Sources */,
 				B0199C251D532B750008D003 /* JSQMessagesCollectionViewCellIncoming.m in Sources */,
 				B068DB191CF6FE5700A65938 /* DDList.m in Sources */,
+				B0199E951D59DB100008D003 /* UIColorExtension.swift in Sources */,
+				B0199E8A1D59DB100008D003 /* DDGlobal.swift in Sources */,
 				B068DB091CF6FE5700A65938 /* XMPPPlainAuthentication.m in Sources */,
 				B068DB161CF6FE5700A65938 /* XMPPParser.m in Sources */,
 				B0BB0C561D49DB8900BFEBCF /* ZPIMDevice.swift in Sources */,
 				B068DCC71CF7054600A65938 /* DDTTYLogger.m in Sources */,
 				B068DB0E1CF6FE5700A65938 /* NSNumber+XMPP.m in Sources */,
+				B0199E8D1D59DB100008D003 /* NSDataExtension.swift in Sources */,
+				B0199EAF1D59DB100008D003 /* DDLutController.swift in Sources */,
+				B0199E981D59DB100008D003 /* UIImageViewExtension.swift in Sources */,
 				B068DB101CF6FE5700A65938 /* XMPPConstants.m in Sources */,
 				B0199C231D532B750008D003 /* JSQMessagesCollectionView.m in Sources */,
 				B0BB0C441D48907500BFEBCF /* ZPIMConversation.swift in Sources */,
+				B0199E901D59DB100008D003 /* NSURLExtension.swift in Sources */,
 				B0BB0C541D48B72700BFEBCF /* ZPIMLoactionMessageBody.swift in Sources */,
+				B0199E941D59DB100008D003 /* UIButtonExtension.swift in Sources */,
+				B0199EA21D59DB100008D003 /* DDChatCell.swift in Sources */,
+				B0199E831D59DB100008D003 /* DDLog.swift in Sources */,
 				B0199C1A1D532B750008D003 /* JSQAudioMediaItem.m in Sources */,
 				B068DA341CF6FCFA00A65938 /* SecondViewController.swift in Sources */,
 				B068DA9F1CF6FE3900A65938 /* GCDAsyncSocket.m in Sources */,
 				B0199DB81D5586400008D003 /* Utility.swift in Sources */,
 				B053F4141D508CB6009DDC40 /* ZPIMIGroupManager.swift in Sources */,
+				B0199E9B1D59DB100008D003 /* UITextViewExtension.swift in Sources */,
 				B0199DCD1D5589580008D003 /* AFURLResponseSerialization.m in Sources */,
 				B0199C201D532B750008D003 /* JSQPhotoMediaItem.m in Sources */,
+				B0199EBA1D59DB100008D003 /* DDOptionButton.swift in Sources */,
+				B0199EA71D59DB100008D003 /* DDChatVoiceButton.swift in Sources */,
 				B068DB151CF6FE5700A65938 /* XMPPModule.m in Sources */,
+				B0199E8B1D59DB100008D003 /* ALAssetExtension.swift in Sources */,
 				B068DCC21CF7054600A65938 /* DDAbstractDatabaseLogger.m in Sources */,
+				B0199EAA1D59DB100008D003 /* DDInputVoiceView.swift in Sources */,
+				B0199E7D1D59DB100008D003 /* DDAssetOperation.swift in Sources */,
+				B0199EB81D59DB100008D003 /* DDLevelView.swift in Sources */,
 				B0199C121D532B750008D003 /* JSQMessagesMediaViewBubbleImageMasker.m in Sources */,
 				B0199DCC1D5589580008D003 /* AFURLRequestSerialization.m in Sources */,
 				B0BB0C701D4A094100BFEBCF /* LogFormatter.swift in Sources */,
+				B0199E891D59DB100008D003 /* DDUploader.swift in Sources */,
 				B068DB1C1CF6FE5700A65938 /* XMPPIDTracker.m in Sources */,
 				B068DB0F1CF6FE5700A65938 /* NSXMLElement+XMPP.m in Sources */,
 				B068DA301CF6FCFA00A65938 /* AppDelegate.swift in Sources */,
 				B068DB1A1CF6FE5700A65938 /* GCDMulticastDelegate.m in Sources */,
+				B0199E9A1D59DB100008D003 /* UIScrollViewExtension.swift in Sources */,
 				B0199DBA1D5586B50008D003 /* Global.swift in Sources */,
 				B068DAB31CF6FE3900A65938 /* DDXMLElement.m in Sources */,
 				B068DB181CF6FE5700A65938 /* XMPPStream.m in Sources */,
 				B068DB1E1CF6FE5700A65938 /* XMPPStringPrep.m in Sources */,
+				B0199EA41D59DB100008D003 /* DDChatImageButton.swift in Sources */,
 				B0BB0BAF1D47703900BFEBCF /* ZPIMPushOptions.swift in Sources */,
 				B0199C191D532B750008D003 /* JSQMessagesCollectionViewLayoutAttributes.m in Sources */,
 				B068DAA21CF6FE3900A65938 /* AsyncUdpSocket.m in Sources */,
@@ -1533,6 +1918,7 @@
 				B068DCCA1CF7054600A65938 /* DDMultiFormatter.m in Sources */,
 				B068DB0D1CF6FE5700A65938 /* NSData+XMPP.m in Sources */,
 				B068DB071CF6FE5700A65938 /* XMPPDeprecatedPlainAuthentication.m in Sources */,
+				B0199EB21D59DB100008D003 /* DDAnimationTextView.swift in Sources */,
 				B068DAB21CF6FE3900A65938 /* DDXMLDocument.m in Sources */,
 				B068DAAF1CF6FE3900A65938 /* DDXMLElementAdditions.m in Sources */,
 				B0199DCB1D5589580008D003 /* AFSecurityPolicy.m in Sources */,
@@ -1541,20 +1927,29 @@
 				B053F3FB1D508C9C009DDC40 /* ZPIMChatManagerDelegate.swift in Sources */,
 				B068DB051CF6FE5700A65938 /* XMPPAnonymousAuthentication.m in Sources */,
 				B0199C0B1D532B750008D003 /* UIColor+JSQMessages.m in Sources */,
+				B0199E8F1D59DB100008D003 /* NSObjectExtension.swift in Sources */,
 				B053F3F91D508C9C009DDC40 /* ZPIMChatManagerMuticastDelegate.swift in Sources */,
 				B0BB0C521D489FDB00BFEBCF /* ZPIMTextMessageBody.swift in Sources */,
 				B0199C2A1D532B750008D003 /* JSQMessagesInputToolbar.m in Sources */,
 				B0BB0C4A1D48912600BFEBCF /* ZPIMFileMessageBody.swift in Sources */,
 				B0199C331D532B750008D003 /* JSQMessagesTypingView.m in Sources */,
+				B0199EAB1D59DB100008D003 /* DDTextView.swift in Sources */,
 				B0199C291D532B750008D003 /* JSQMessagesComposerTextView.m in Sources */,
 				B068DB1F1CF6FE5700A65938 /* XMPPTimer.m in Sources */,
+				B0199EAC1D59DB100008D003 /* DDAssetNavigationController.swift in Sources */,
+				B0199EB71D59DB100008D003 /* DDLabel.swift in Sources */,
 				B0199C2C1D532B750008D003 /* JSQMessagesLoadEarlierHeaderView.m in Sources */,
+				B0199E921D59DB100008D003 /* StringExtension.swift in Sources */,
 				B053F40A1D508CAD009DDC40 /* ZPIMIContactManager.swift in Sources */,
+				B0199E861D59DB100008D003 /* DDPlayer.swift in Sources */,
 				B068DA9E1CF6FE3900A65938 /* README.markdown in Sources */,
 				B0199C0E1D532B750008D003 /* JSQMessagesViewController.m in Sources */,
 				B0BB0C481D48910000BFEBCF /* ZPIMMessageBody.swift in Sources */,
 				B068DB0C1CF6FE5700A65938 /* XMPPXOAuth2Google.m in Sources */,
+				B0199EA91D59DB100008D003 /* DDInputTextView.swift in Sources */,
+				B0199EB41D59DB100008D003 /* DDButton.swift in Sources */,
 				B0BB0BBF1D4866D300BFEBCF /* ZPIMError.swift in Sources */,
+				B0199E871D59DB100008D003 /* DDSystem.swift in Sources */,
 				B0199C091D532B750008D003 /* NSBundle+JSQMessages.m in Sources */,
 				B0199DD01D55926B0008D003 /* MainController.swift in Sources */,
 				B0199DB41D5339410008D003 /* ChatController.swift in Sources */,
@@ -1566,17 +1961,25 @@
 				B068DCA11CF7001200A65938 /* DDXML.swift in Sources */,
 				B0199C101D532B750008D003 /* JSQMessagesAvatarImageFactory.m in Sources */,
 				B053F4161D508CD3009DDC40 /* ZPIMUtils.swift in Sources */,
+				B0199EA61D59DB100008D003 /* DDChatTextButton.swift in Sources */,
 				B053F4101D508CB6009DDC40 /* ZPIMGroup.swift in Sources */,
+				B0199EB91D59DB100008D003 /* DDNavigationBar.swift in Sources */,
 				B0199C271D532B750008D003 /* JSQMessagesCollectionViewCellOutgoing.m in Sources */,
+				B0199E971D59DB100008D003 /* UIImageExtension.swift in Sources */,
 				B068DB131CF6FE5700A65938 /* XMPPJID.m in Sources */,
+				B0199E911D59DB100008D003 /* ArrayExtension.swift in Sources */,
 				B068DCC01CF7054600A65938 /* CLIColor.m in Sources */,
+				B0199E881D59DB100008D003 /* DDTimer.swift in Sources */,
 				B0199C161D532B750008D003 /* JSQMessagesBubblesSizeCalculator.m in Sources */,
+				B0199E8C1D59DB100008D003 /* ALAssetsGroupExtension.swift in Sources */,
 				B0199C1C1D532B750008D003 /* JSQMediaItem.m in Sources */,
 				B068DB061CF6FE5700A65938 /* XMPPDeprecatedDigestAuthentication.m in Sources */,
 				B0199C1D1D532B750008D003 /* JSQMessage.m in Sources */,
 				B0199C1B1D532B750008D003 /* JSQLocationMediaItem.m in Sources */,
 				B0199C311D532B750008D003 /* JSQMessagesTypingIndicatorFooterView.m in Sources */,
+				B0199EA51D59DB100008D003 /* DDChatModel.swift in Sources */,
 				B0199DB61D534B810008D003 /* ConversationsController.swift in Sources */,
+				B0199EB31D59DB100008D003 /* DDBadgeView.swift in Sources */,
 				B0BB0C461D4890EA00BFEBCF /* ZPIMMessage.swift in Sources */,
 				B053F4021D508CA4009DDC40 /* ZPIMChatRoomManager.swift in Sources */,
 				B068DB0B1CF6FE5700A65938 /* XMPPXFacebookPlatformAuthentication.m in Sources */,
@@ -1586,16 +1989,27 @@
 				B0199C1E1D532B750008D003 /* JSQMessagesAvatarImage.m in Sources */,
 				B068DB121CF6FE5700A65938 /* XMPPIQ.m in Sources */,
 				B0BB0C4E1D48917C00BFEBCF /* ZPIMVideoMessageBody.swift in Sources */,
+				B0199EB01D59DB100008D003 /* DDTableViewController.swift in Sources */,
+				B0199E9C1D59DB100008D003 /* UIViewExtension.swift in Sources */,
 				B068DCC11CF7054600A65938 /* CocoaLumberjack.swift in Sources */,
+				B0199E8E1D59DB100008D003 /* NSDateExtension.swift in Sources */,
+				B0199EBC1D59DB100008D003 /* DDPlayerView.swift in Sources */,
+				B0199EA11D59DB100008D003 /* DDChat2ModelView.swift in Sources */,
 				B0199C181D532B750008D003 /* JSQMessagesCollectionViewFlowLayoutInvalidationContext.m in Sources */,
 				B0199DB21D5336860008D003 /* XMPPReconnect.m in Sources */,
 				B053F4111D508CB6009DDC40 /* ZPIMGroupManager.swift in Sources */,
 				B068DAA11CF6FE3900A65938 /* AsyncSocket.m in Sources */,
+				B0199EB61D59DB100008D003 /* DDKeyboardView.swift in Sources */,
 				B0199C2B1D532B750008D003 /* JSQMessagesLabel.m in Sources */,
 				B0BB0C4C1D48915E00BFEBCF /* ZPIMImageMessageBody.swift in Sources */,
+				B0199E801D59DB100008D003 /* DDGLKit.swift in Sources */,
 				B068DCC31CF7054600A65938 /* DDASLLogCapture.m in Sources */,
 				B0199DC91D5589580008D003 /* AFHTTPSessionManager.m in Sources */,
+				B0199E811D59DB100008D003 /* DDHashAlgorithm.swift in Sources */,
+				B0199E841D59DB100008D003 /* DDMath.swift in Sources */,
+				B0199E991D59DB100008D003 /* UINavigationControllerExtension.swift in Sources */,
 				B0199C151D532B750008D003 /* JSQAudioMediaViewAttributes.m in Sources */,
+				B0199EAD1D59DB100008D003 /* DDGalleryController.swift in Sources */,
 				B068DAB01CF6FE3900A65938 /* NSString+DDXML.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
