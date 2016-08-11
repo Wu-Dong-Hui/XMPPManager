@@ -62,4 +62,5 @@ class ZPIMMessage: NSObject {
     override var description: String {
         return "\(from)->\(to): \(body.description)"
     }
+    
 }

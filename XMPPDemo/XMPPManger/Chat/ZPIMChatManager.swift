@@ -16,14 +16,6 @@ class ZPIMChatManager: NSObject, ZPIMIChatManager, XMPPStreamDelegate {
         super.init()
         muticastDelegate = ZPIMChatManagerMuticastDelegate()
     }
-    func convertMessage(message: XMPPMessage) -> ZPIMMessage {
-        let m = ZPIMMessage()
-        let body = ZPIMTextMessageBody(text: message.body())
-        m.from = message.fromStr()
-        m.to = message.toStr()
-        m.body = body
-        return m
-    }
 
     //MARK: - ZPIMIChatManager
     /**
@@ -155,17 +147,7 @@ class ZPIMChatManager: NSObject, ZPIMIChatManager, XMPPStreamDelegate {
      - parameter completion: 发送完成回调block
      */
     func asyncSendMessage(message: ZPIMMessage, progress: ZPIMSendMessageProgressCompletion?, completion: ZPIMSendMessageCompletion?) {
-        let toJid = XMPPJID.jidWithUser(message.to, domain: ZPIMClient.domain, resource: ZPIMClient.resource)
-    
-        let xmppMessage = XMPPMessage(type: "chat", to: toJid)
-        xmppMessage.addAttributeWithName("from", stringValue: ZPIMClient.sharedClient.getUserName()! + "@\(ZPIMClient.domain)/\(ZPIMClient.resource)")
-//        xmppMessage.addAttributeWithName("xmlns", stringValue: "jabber:client")
-        if let textBody = message.body as? ZPIMTextMessageBody {
-            xmppMessage.addBody(textBody.text)
-        } else if let imageBody = message.body as? ZPIMImageMessageBody {
-            xmppMessage.addBody(imageBody.reomotePath)
-            xmppMessage.addAttributeWithName("mediaType", stringValue: imageBody.type.description)
-        }
+        let xmppMessage = ZPIMUtil.convertToXMPPMessage(message)
         completionHandler = completion
         ZPIMClient.sharedClient.sendElement(xmppMessage)
     }
@@ -203,24 +185,39 @@ class ZPIMChatManager: NSObject, ZPIMIChatManager, XMPPStreamDelegate {
      - parameter completion: 下载完成回调block
      */
     func asyncDownloadMessageAttachments(message: ZPIMMessage, progress: ZPIMSendMessageProgressCompletion?, completion: ZPIMDownloadMessageCompletion?) {
+        if let _ = message.body as? ZPIMTextMessageBody {
+            progress?(progress: 1.0)
+            completion?(message: message, error: ZPIMError.success())
+        } else if let imageBody = message.body as? ZPIMImageMessageBody {
+            if imageBody.localPath != nil {
+                progress?(progress: 1.0)
+                completion?(message: message, error: ZPIMError.success())
+            } else {
+                let downloader = ZPIMMediaDownloader(mediaType: .image, remoteURL: NSURL(string: imageBody.thumbnailRemotePath)!, destinationURL: NSURL(string: NSTemporaryDirectory())!)
+                downloader.completionBlock = {
+                    DDLogDebug("download success!!!")
+                }
+                downloader.start()
+            }
+        }
         
     }
     
     //MARK: - XMPPStreamDelegate
     func xmppStream(sender: XMPPStream!, didReceiveMessage message: XMPPMessage!) {
-        if !message.isChatMessageWithBody() {
+        if !message.isValidMessage() {
             return
         }
-        let m = convertMessage(message)
+        let m = ZPIMUtil.convertToZPIMMessage(message)
         if let tmpMuticastDelegate: ZPIMChatManagerDelegate = muticastDelegate {
             tmpMuticastDelegate.didReceiveMessages!([m])
         }
     }
     func xmppStream(sender: XMPPStream!, didSendMessage message: XMPPMessage!) {
-        guard message.isChatMessageWithBody() else {
+        guard message.isValidMessage() else {
             return
         }
-        completionHandler?(message: convertMessage(message), error: ZPIMError(code: 0, description: "success"))
+        completionHandler?(message: ZPIMUtil.convertToZPIMMessage(message), error: ZPIMError(code: 0, description: "success"))
     }
     
     func xmppStream(sender: XMPPStream!, didFailToSendMessage message: XMPPMessage!, error: NSError!) {

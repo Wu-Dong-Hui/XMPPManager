@@ -48,9 +48,10 @@ class ConversationsController: UITableViewController {
     }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let chat = ChatController()
-//        chat.hidesBottomBarWhenPushed = true
-//        navigationController?.pushViewController(chat, animated: true)
         chat.conversation = conversations[indexPath.row]
+//        chat.hidesBottomBarWhenPushed = true
+//        navigationController?.pushViewController(chat, animated: true)        
+        
         let nav = UINavigationController(rootViewController: chat)
         presentViewController(nav, animated: true, completion: nil)
     }

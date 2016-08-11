@@ -43,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             client.setPassword("admin")
             login("test1", password: "admin")
         }
-        
+        DDLogDebug(NSTemporaryDirectory())
         return true
     }
     func login(user: String, password: String) {

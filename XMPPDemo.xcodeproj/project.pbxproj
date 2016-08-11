@@ -138,6 +138,8 @@
 		B0199EBB1D59DB100008D003 /* DDPartImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E731D59DB100008D003 /* DDPartImageView.swift */; };
 		B0199EBC1D59DB100008D003 /* DDPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E741D59DB100008D003 /* DDPlayerView.swift */; };
 		B0199EBD1D59DB100008D003 /* DDStarRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199E751D59DB100008D003 /* DDStarRateView.swift */; };
+		B0199EBF1D5B22C70008D003 /* XMPPMessage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199EBE1D5B22C70008D003 /* XMPPMessage+Extension.swift */; };
+		B0199EC11D5C6DC00008D003 /* ZPIMMediaDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0199EC01D5C6DC00008D003 /* ZPIMMediaDownloader.swift */; };
 		B053F3F91D508C9C009DDC40 /* ZPIMChatManagerMuticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053F3F51D508C9C009DDC40 /* ZPIMChatManagerMuticastDelegate.swift */; };
 		B053F3FA1D508C9C009DDC40 /* ZPIMIChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053F3F61D508C9C009DDC40 /* ZPIMIChatManager.swift */; };
 		B053F3FB1D508C9C009DDC40 /* ZPIMChatManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053F3F71D508C9C009DDC40 /* ZPIMChatManagerDelegate.swift */; };
@@ -447,6 +449,8 @@
 		B0199E731D59DB100008D003 /* DDPartImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDPartImageView.swift; sourceTree = "<group>"; };
 		B0199E741D59DB100008D003 /* DDPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDPlayerView.swift; sourceTree = "<group>"; };
 		B0199E751D59DB100008D003 /* DDStarRateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDStarRateView.swift; sourceTree = "<group>"; };
+		B0199EBE1D5B22C70008D003 /* XMPPMessage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XMPPMessage+Extension.swift"; sourceTree = "<group>"; };
+		B0199EC01D5C6DC00008D003 /* ZPIMMediaDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMMediaDownloader.swift; sourceTree = "<group>"; };
 		B053F3F51D508C9C009DDC40 /* ZPIMChatManagerMuticastDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMChatManagerMuticastDelegate.swift; sourceTree = "<group>"; };
 		B053F3F61D508C9C009DDC40 /* ZPIMIChatManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMIChatManager.swift; sourceTree = "<group>"; };
 		B053F3F71D508C9C009DDC40 /* ZPIMChatManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPIMChatManagerDelegate.swift; sourceTree = "<group>"; };
@@ -1456,8 +1460,10 @@
 				B0BB0C6A1D49EAC200BFEBCF /* Contact */,
 				B0BB0C691D49EAB900BFEBCF /* Group */,
 				B0BB0BAA1D476C6F00BFEBCF /* ZPIMClient.swift */,
+				B0199EBE1D5B22C70008D003 /* XMPPMessage+Extension.swift */,
 				B0BB0C571D49E80900BFEBCF /* ZPIMClientDelegate.swift */,
 				B053F4151D508CD3009DDC40 /* ZPIMUtils.swift */,
+				B0199EC01D5C6DC00008D003 /* ZPIMMediaDownloader.swift */,
 				B0BB0C551D49DB8900BFEBCF /* ZPIMDevice.swift */,
 				B0BB0BAC1D476CE400BFEBCF /* ZPIMOptions.swift */,
 				B0BB0BAE1D47703900BFEBCF /* ZPIMPushOptions.swift */,
@@ -1920,6 +1926,7 @@
 				B068DB071CF6FE5700A65938 /* XMPPDeprecatedPlainAuthentication.m in Sources */,
 				B0199EB21D59DB100008D003 /* DDAnimationTextView.swift in Sources */,
 				B068DAB21CF6FE3900A65938 /* DDXMLDocument.m in Sources */,
+				B0199EC11D5C6DC00008D003 /* ZPIMMediaDownloader.swift in Sources */,
 				B068DAAF1CF6FE3900A65938 /* DDXMLElementAdditions.m in Sources */,
 				B0199DCB1D5589580008D003 /* AFSecurityPolicy.m in Sources */,
 				B0199C0A1D532B750008D003 /* NSString+JSQMessages.m in Sources */,
@@ -1940,6 +1947,7 @@
 				B0199EB71D59DB100008D003 /* DDLabel.swift in Sources */,
 				B0199C2C1D532B750008D003 /* JSQMessagesLoadEarlierHeaderView.m in Sources */,
 				B0199E921D59DB100008D003 /* StringExtension.swift in Sources */,
+				B0199EBF1D5B22C70008D003 /* XMPPMessage+Extension.swift in Sources */,
 				B053F40A1D508CAD009DDC40 /* ZPIMIContactManager.swift in Sources */,
 				B0199E861D59DB100008D003 /* DDPlayer.swift in Sources */,
 				B068DA9E1CF6FE3900A65938 /* README.markdown in Sources */,

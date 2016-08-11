@@ -7,7 +7,18 @@
 //
 
 import UIKit
-
+@objc enum ZPIMErrorCode: Int {
+    case success = 0
+    
+    
+    var description: String {
+        switch self {
+        case .success:
+            return "success"
+        }
+    }
+    
+}
 class ZPIMError: NSObject {
     private (set) var code: Int = 0
     private (set) var desc: String = ""
@@ -20,5 +31,8 @@ class ZPIMError: NSObject {
     init(code: Int, description: String) {
         self.code = code
         self.desc = description
+    }
+    class func success() -> ZPIMError {
+        return ZPIMError(code: ZPIMErrorCode.success.rawValue, description: ZPIMErrorCode.success.description)
     }
 }
